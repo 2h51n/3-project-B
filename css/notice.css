@@ -1,0 +1,27 @@
+@charset "utf-8";
+.notice_banner {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+.notice_container {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.notice_container > ul  {
+  width: 100%;
+  flex-direction: column
+}
+.notice_container > ul > li {
+  width:30%;
+  display: flex;
+  
+  text-align: center;
+}
+.notice_container > ul > li>img {
+width: 100%;
+}
