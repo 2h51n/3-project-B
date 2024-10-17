@@ -43,7 +43,7 @@
   /* height: 500px; */
   /* object-fit: contain; */
 }
-
+/* ================================================ */
 /* 라인배너 */
 
 .line_banner {
@@ -82,3 +82,29 @@
 .line_container a> p>span{
     font-size: 14px;
 }
+/* 반응형 */
+@media (max-width: 950px) {
+  .line_container a> p{
+    top: 10%;
+  }
+  .line_container a> p>span {
+    font-size: 12px;
+
+  }
+  
+}
+  @media (max-width: 768px) {
+    .line_container a> p{
+      top: 5%;
+    }
+    .line_container a> p>span {
+      font-size: 10px;
+    }}
+    @media (max-width: 735px) {
+      .line_container a> p{
+        top: 1%;
+      }
+    }
+    @media (max-width: 500px) {
+      .line_banner{display: none;}
+    }
