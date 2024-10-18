@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded",  function () {
   const noticeSwiper = new Swiper(".notice_swiper", {
     slidesPerView: 1.3, // 한 번에 보여질 슬라이드 수
     spaceBetween: 20, // 슬라이드 간의 간격
@@ -26,4 +26,4 @@ window.onload = function () {
       },
     },
   });
-};
+});
