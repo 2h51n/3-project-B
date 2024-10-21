@@ -47,12 +47,46 @@
     <script src="js/review.js"></script>
     <script src="js/notice.js"></script>
     <script src="js/popular_item.js"></script>
-    <script src="js/main_banner.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/fix-btn.js"></script>
+    <script src="js/video.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
-    <title>B안 환경을 살리는 소비 'JUNKY FUNKY!'</title>
+    <title>B안 JUNKY FUNKY</title>
   </head>
   <body>
+    <!-- 모달 구조 -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <!-- 첫 번째 이미지 -->
+        <img src="images/modal/modal_main.png" alt="이벤트 팝업 이미지" id="modalImage" />
+        <!-- 두 번째 '오늘 하루 열지 않음'과 닫기 버튼 -->
+        <div class="close-wrap">
+          <label>
+            <input type="checkbox" id="notToday" />
+            <span class="notToday">오늘 하루 열지 않음</span>
+          </label>
+          <span class="close-btn">&times;</span>
+        </div>
+      </div>
+    </div>
+    <!-- 장바구니 고정 버튼 -->
+    <div class="cart-btn fixBtn">
+      <a href="#">
+        <img src="images/btn/cart_btn.png" alt="구매하기 고정버튼" class="fix-btn-img" />
+        <img src="images/btn/cart_hover_btn.png" alt="구매하기 고정버튼 호버" class="fix-btn-img-hover" />
+      </a>
+    </div>
+    <!-- CS버튼 -->
+    <div class="cs-btn fixBtn">
+      <img src="images/btn/cs_btn.png" alt="고객센터" class="cs-btn-img" />
+    </div>
+    <!-- Top 버튼 -->
+    <div class="top-btn fixBtn">
+      <img src="images/btn/top_btn.png" alt="탑버튼" class="top-btn-img" />
+    </div>
+
     <div class="wrap">
       <!-- 헤더 영역 -->
       <header class="header">
@@ -168,24 +202,24 @@
               <div class="head-search">
                 <input type="text" placeholder="검색어를 입력해주세요" />
                 <a href="#">
-                  <img src="images/A/icon/popup-icon/serach_bar.svg" alt="서치 아이콘" class="search_icon" />
+                  <img src="images/B/icon/popup-icon/serach.png" alt="서치 아이콘" class="search_icon" />
                 </a>
               </div>
               <div class="header-icons">
                 <div class="searchMB">
                   <a href="#">
-                    <img src="images/A/icon/popup-icon/serach_bar.svg" alt="서치 아이콘" class="search_icon" />
+                    <img src="images/B/icon/popup-icon/serach.png" alt="서치 아이콘" class="search_icon" />
                   </a>
                 </div>
                 <div class="loginBt">
                   <a href="#">
-                    <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
+                    <img src="images/B/icon/popup-icon/user.png" alt="유저 아이콘" />
                     <!-- <span>로그인</span> -->
                   </a>
                 </div>
                 <div class="cartBt">
                   <a href="#">
-                    <img src="images/A/icon/popup-icon/cart-icon.svg" alt="카트 아이콘" />
+                    <img src="images/B/icon/popup-icon/cart2.png" alt="유저 아이콘" />
                     <!-- <span>카트</span> -->
                   </a>
                 </div>
@@ -205,61 +239,42 @@
           </div>
         </div>
       </header>
-      <!-- 배너 영역 -->
-      <div class="banner">
-        <!-- 배너 슬라이드 -->
-        <div class="banner-slide-area">
-          <div class="swiper swiper-Banner">
+      <!-- 배너비디오 영역 -->
+      <div class="video-banner">
+        <div class="video-slide-area">
+          <div class="swiper swVideo">
             <div class="swiper-wrapper">
-              <div class="swiper-slide banne-slide">
-                <a href="#">
-                  <img src="images/A/banner/1920_banner01.png" alt="배너1_1920" class="b1920px" />
-                  <img src="images/A/banner/768_banner01.png" alt="배너1_768" class="b768px" />
-                  <!-- <img src="images/A/banner/360_banner01.png" alt="배너1_768" class="b360px"/> -->
-                </a>
+              <div class="swiper-slide black">
+                <video loop muted>
+                  <source src="video/video1.mp4" type="video/mp4" />
+                </video>
               </div>
-              <div class="swiper-slide banne-slide">
-                <a href="#">
-                  <img src="images/A/banner/1920_banner02.png" alt="배너1_1920" class="b1920px" />
-                  <img src="images/A/banner/768_banner02.png" alt="배너1_1920" class="b768px" />
-                  <!-- <img src="images/A/banner/360_banner02.png" alt="배너1_1920" class="b360px"/> -->
-                </a>
+              <div class="swiper-slide mosgreen">
+                <video loop muted>
+                  <source src="video/video2.mp4" type="video/mp4" />
+                </video>
               </div>
-              <div class="swiper-slide banne-slide">
-                <a href="#">
-                  <img src="images/A/banner/1920_banner03.png" alt="배너1_1920" class="b1920px" />
-                  <img src="images/A/banner/768_banner03.png" alt="배너1_1920" class="b768px" />
-                  <!-- <img src="images/A/banner/360_banner03.png" alt="배너1_1920" class="b360px"/> -->
-                </a>
-              </div>
-              <div class="swiper-slide banne-slide">
-                <a href="#">
-                  <img src="images/A/banner/1920_banner04.png" alt="배너1_1920" class="b1920px" />
-                  <img src="images/A/banner/768_banner04.png" alt="배너1_1920" class="b768px" />
-                  <!-- <img src="images/A/banner/360_banner04.png" alt="배너1_1920" class="b360px"/> -->
-                </a>
-              </div>
-              <div class="swiper-slide banne-slide">
-                <a href="#">
-                  <img src="images/A/banner/1920_banner05.png" alt="배너1_1920" class="b1920px" />
-                  <img src="images/A/banner/768_banner05.png" alt="배너1_1920" class="b768px" />
-                  <!-- <img src="images/A/banner/360_banner05.png" alt="배너1_1920" class="b360px"/> -->
-                </a>
-              </div>
+              <!-- <div class="swiper-slide white">
+                <video loop muted>
+                  <source src="/video/video3.mp4" type="video/mp4" />
+                </video>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
+
       <!-- 라인배너 영역 -->
-      <div class="line_banner">
+      <!-- <div class="line_banner">
         <div class="line_container">
           <a href="introduction.css">
             <img src="images/B/e.banner/line_banner.png" alt="환경배너" />
             <p>환경을 보호한 당신에게 감사드립니다. <br /><span>*정키펑키 매출의 1%가 환경단체에 기부됩니다.*</span></p>
           </a>
         </div>
-      </div>
+      </div> -->
       <!-- 메인 영역 시작 -->
+
       <!-- 루키 브랜드 -->
       <section class="rookie-brands">
         <div class="rookie_container">
@@ -317,6 +332,30 @@
               </div>
               <p class="brand-name">월하담</p>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- 쿠폰 -->
+      <section class="coupon-section">
+        <div class="coupon_container">
+          <h2 class="section-title">이달의 쿠폰</h2>
+          <div class="coupon-list">
+            <a href="login.html" class="coupon-item">
+              <img src="images/B/coupon/1920_coupon1.png" alt="쿠폰" />
+              <div class="overlay">쿠폰받기</div>
+            </a>
+            <a href="login.html" class="coupon-item">
+              <img src="images/B/coupon/1920_coupon2.png" alt="쿠폰" />
+              <div class="overlay">쿠폰받기</div>
+            </a>
+            <a href="login.html" class="coupon-item">
+              <img src="images/B/coupon/1920_coupon3.png" alt="쿠폰" />
+              <div class="overlay">쿠폰받기</div>
+            </a>
+            <a href="login.html" class="coupon-item">
+              <img src="images/B/coupon/1920_coupon4.png" alt="쿠폰" />
+              <div class="overlay">쿠폰받기</div>
+            </a>
           </div>
         </div>
       </section>
@@ -662,30 +701,51 @@
           <button id="showMoreButton">더 보기</button>
         </div>
       </div>
-      <!-- 쿠폰 -->
-      <section class="coupon-section">
-        <div class="coupon_container">
-          <h2 class="section-title">이달의 쿠폰</h2>
-          <div class="coupon-list">
-            <a href="login.html" class="coupon-item">
-              <img src="images/B/coupon/1920_coupon1.png" alt="쿠폰" />
-              <div class="overlay">쿠폰받기</div>
-            </a>
-            <a href="login.html" class="coupon-item">
-              <img src="images/B/coupon/1920_coupon2.png" alt="쿠폰" />
-              <div class="overlay">쿠폰받기</div>
-            </a>
-            <a href="login.html" class="coupon-item">
-              <img src="images/B/coupon/1920_coupon3.png" alt="쿠폰" />
-              <div class="overlay">쿠폰받기</div>
-            </a>
-            <a href="login.html" class="coupon-item">
-              <img src="images/B/coupon/1920_coupon4.png" alt="쿠폰" />
-              <div class="overlay">쿠폰받기</div>
-            </a>
+      <!-- 배너 영역 -->
+      <div class="banner">
+        <!-- 배너 슬라이드 -->
+        <div class="banner-slide-area">
+          <div class="swiper swiper-Banner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide banne-slide">
+                <a href="#">
+                  <img src="images/B/main_banner/1920_banner01-2.png" alt="배너1_1920" class="b1920px" />
+                  <img src="images/A/banner/768_banner01.png" alt="배너1_768" class="b768px" />
+                  <!-- <img src="images/A/banner/360_banner01.png" alt="배너1_768" class="b360px"/> -->
+                </a>
+              </div>
+              <div class="swiper-slide banne-slide">
+                <a href="#">
+                  <img src="images/B/main_banner/1920_banner02-2.png" alt="배너1_1920" class="b1920px" />
+                  <img src="images/A/banner/768_banner02.png" alt="배너1_1920" class="b768px" />
+                  <!-- <img src="images/A/banner/360_banner02.png" alt="배너1_1920" class="b360px"/> -->
+                </a>
+              </div>
+              <div class="swiper-slide banne-slide">
+                <a href="#">
+                  <img src="images/B/main_banner/1920_banner03-2.png" alt="배너1_1920" class="b1920px" />
+                  <img src="images/A/banner/768_banner03.png" alt="배너1_1920" class="b768px" />
+                  <!-- <img src="images/A/banner/360_banner03.png" alt="배너1_1920" class="b360px"/> -->
+                </a>
+              </div>
+              <div class="swiper-slide banne-slide">
+                <a href="#">
+                  <img src="images/B/main_banner/1920_banner04-2.png" alt="배너1_1920" class="b1920px" />
+                  <img src="images/A/banner/768_banner04.png" alt="배너1_1920" class="b768px" />
+                  <!-- <img src="images/A/banner/360_banner04.png" alt="배너1_1920" class="b360px"/> -->
+                </a>
+              </div>
+              <div class="swiper-slide banne-slide">
+                <a href="#">
+                  <img src="images/B/main_banner/1920_banner05-2.png" alt="배너1_1920" class="b1920px" />
+                  <img src="images/A/banner/768_banner05.png" alt="배너1_1920" class="b768px" />
+                  <!-- <img src="images/A/banner/360_banner05.png" alt="배너1_1920" class="b360px"/> -->
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
       <!-- 인기 아이템-->
       <section class="popular-items-section">
         <div class="container">
@@ -700,18 +760,22 @@
               <p class="product-brand">모어포 모레</p>
               <p class="product-name">플라스틱 비누받침</p>
               <p class="product-price">21,000원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(11,347)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 2번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="100">
               <div class="ranking-badge"><br />2위</div>
-              <img src="images/product images/pd_img (22).png" alt="ODD.CALENDAR 2024" class="product-image" />
+              <img src="images/product images/pd_img (10).png" alt="ODD.CALENDAR 2024" class="product-image" />
               <p class="product-brand">ODD.TRAIN</p>
               <p class="product-name">ODD. CALENDAR 2024</p>
               <p class="product-price">56,000원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(8,856)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 3번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="200">
@@ -720,8 +784,10 @@
               <p class="product-brand">피그랩</p>
               <p class="product-name">거북이 보틀 오프너</p>
               <p class="product-price">12,300원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(7,724)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 4번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="300">
@@ -730,8 +796,10 @@
               <p class="product-brand">유리노리</p>
               <p class="product-name">리사이클 유리팔찌</p>
               <p class="product-price">32,000원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(6,249)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 5번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="400">
@@ -740,8 +808,10 @@
               <p class="product-brand">DABOK</p>
               <p class="product-name">헌의류 곱창밴드</p>
               <p class="product-price">7,900원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(5,237)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 6번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="500">
@@ -750,8 +820,10 @@
               <p class="product-brand">프로젝트 노하우</p>
               <p class="product-name">양말 목 체커보드백</p>
               <p class="product-price">15,000원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(3,856)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 7번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="600">
@@ -760,8 +832,10 @@
               <p class="product-brand">비비작 공작소</p>
               <p class="product-name">폐목 우드 트레이</p>
               <p class="product-price">35,000원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(2,261)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
             <!-- 8번 상품 -->
             <div class="product-item" data-aos="fade-up" data-aos-delay="700">
@@ -770,8 +844,10 @@
               <p class="product-brand">로샤드 스튜디오</p>
               <p class="product-name">플라스틱 책선반</p>
               <p class="product-price">38,000원</p>
-              <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" class="rating-icon" />
-              <p class="review-count">(1,832)</p>
+              <div class="popular-rating">
+                <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
+                <span>(11,347)</span>
+              </div>
             </div>
           </div>
         </div>

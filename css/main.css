@@ -1,16 +1,18 @@
 @charset "utf-8";
 /* 영역별 css */
 @import url(header.css);
-@import url(main_banner.css);
+@import url(video.css);
 @import url(material.css);
 @import url(notice.css);
 @import url(popular_item.css);
 @import url(coupon.css);
 @import url(rookie_brand.css);
-@import url(main_banner.css);
 @import url(introduction.css);
 @import url(review.css);
 @import url(footer.css);
+@import url(modal.css);
+@import url(fix-btn.css);
+@import url(intro.css);
 /* 폰트 */
 @font-face {
   font-family: "Noto Sans KR";

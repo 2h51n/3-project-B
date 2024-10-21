@@ -15,7 +15,6 @@
   max-width: 1000px;
   background-color: #fff;
   margin: 40px auto;
-  /* margin-top: 40px; */
   justify-content: space-between;
 }
 
@@ -84,7 +83,7 @@
   border: 1px solid #ddd;
   padding: 5px;
   margin: 5% 0;
-  /* text-align: center; */
+  text-align: center;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -98,55 +97,37 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* padding: 5px; */
+  padding: 5px;
   text-decoration: none;
   color: #333;
   font-size: 16px;
+  text-align: left;
 }
-.materal-textbox {
-  width: auto;
-  /* padding: 0 10px; */
+.materal-textbox > p{
+padding: 5px 0 1px 0;
 }
 
-.materal-textbox * {
-  margin: 4px 0;
-}
 .materal-textbox > p:first-child,
 .materal-rating > span {
   font-size: 12px;
+  padding-bottom: 1px;
 }
 
 .price_bold {
   font-weight: bold;
 }
-
-/* .material-goods-card > img{
-    width: 295px;
-    margin: 0 auto;
-} */
-.materal-rating {
-  display: flex;
-  justify-content: center;
+.materal-rating{
+  padding-top: 5px;
 }
 
-.materal-rating span{
+.materal-rating >span{
     font-weight: bold;
+
 }
 
 .materal-rating > img {
-  width: auto;
-  /* height: 100%; */
-  /* max-height: 20px; */
-  object-fit: contain;
-  margin: 0;
+  width: 55%;
 }
-
-/* .material-goods {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-} */
 
 .material-goods-card {
   flex: 1 1 calc(25% - 20px);
@@ -154,16 +135,9 @@
 }
 
 .materal-textbox {
-  padding: 10px;
-  /* text-align: center; */
-}
+  padding: 5px;
 
-/* .material-goods-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-  } */
+}
 
 .clothes,
 .wood,
@@ -218,11 +192,7 @@
 }
 
 /* 768px 이하 화면을 위한 미디어 쿼리 */
-@media (max-width: 768px) {
-  .materal-textbox {
-    text-align: center;
-  }
-}
+
 
 /* 480px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 480px) {
@@ -270,3 +240,66 @@
     display: block;
   }
 }
+/* ========================================================== */
+/* 소재배너 */
+.banner {
+  display: block;
+  width: 100%;
+  /* height: auto; */
+  margin-top: 70px;
+  /* max-width: 1100px; */
+  /* background-color: aqua; */
+  box-shadow: 0 5px 5px -5px #333;
+}
+
+.banner-slide-area {
+  display: block;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+
+.swiper-Banner .swiper-slide {
+  opacity: 0; /* 기본 오파시티 값 */
+  transition: all 1.8s ; /* 오파시티 전환 효과 */
+}
+
+.swiper-Banner .swiper-slide-active {
+  opacity: 1; /* 활성 슬라이드에만 완전한 오파시티 적용 */
+}
+
+.banne-slide > a {
+  display: block;
+  width: 100%;
+  /* background-color: ; */
+}
+.banne-slide > a > img {
+  width: 100%;
+  /* height: 500px; */
+  /* object-fit: contain; */
+}
+.b768px {
+  display: none;
+}
+
+.b360px {
+  display: none;
+}
+
+@media (max-width: 768px){
+  .b1920px {
+    display: none;
+  }
+  .b768px {
+    display: block;
+  }
+  .slide-area{
+    max-width: 450px;
+  }
+  .b360px {
+    display: none;
+  }
+}
+

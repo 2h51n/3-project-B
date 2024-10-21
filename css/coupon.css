@@ -1,71 +1,80 @@
 @charset "utf-8";
 .coupon-section {
-    display: block;
-    position: relative;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-top: 40px;
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 .coupon-container {
-    width: 100%;
+  width: 100%;
 }
-.coupon-list{
-    display: flex;
+.coupon-list {
+  display: flex;
 }
 
 /* 호버했을때  */
 .coupon-item {
-    position: relative;
-    display: block;
-    margin: 10px;
-  }
-  
-  .coupon-item img {
-    display: block;
-    width: 100%;
-    height: auto;
+  position: relative;
+  display: block;
+  margin: 10px;
+}
 
-  }
-  
-  .coupon-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정색 배경 */
-    color: white;
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
- 
-  }
-  
-  .coupon-item:hover .overlay {
-    opacity: 1; /* 마우스를 올렸을 때 글씨가 보이도록 */
-  }
+.coupon-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.coupon-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정색 배경 */
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.coupon-item:hover .overlay {
+  opacity: 1; /* 마우스를 올렸을 때 글씨가 보이도록 */
+}
 /* 반응형 */
 @media (max-width: 1000px) {
-    .coupon-list > a >img {
-        padding-left: 2%;
-    }
+  .coupon-list > a > img {
+    padding-left: 2%;
+  }
 }
 @media (max-width: 768px) {
-    .coupon-list > a >img {
-        padding-left: 1%;
-    }
+  .coupon-list > a > img {
+    padding-left: 1%;
+  }
 }
 @media (max-width: 600px) {
-    .coupon-list{
-        text-align: center;
-    }
-    .coupon-list > a >img {
-        width: 40%;
-        padding-left: 2%;
-        padding-bottom: 10px;
-    }
+  .coupon-list {
+    text-align: center;
+  }
+  .coupon-list > a > img {
+    padding-left: 2%;
+    padding-bottom: 10px;
+  }
+
+}
+@media (max-width: 500px) {
+
+
+  .coupon-list > a > img {
+width: 100%;
+  
+}
+  .coupon-item .overlay {
+display: block;
+}
 }

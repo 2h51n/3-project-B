@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+  /* 배너비디오 */
+  .video-banner {
+    position: relative;
+    width: 100vw;
+    /* height: auto; */
+    margin-top: 100px;
+    box-shadow: 0 5px 5px -5px #333;
+    /* height: calc(100vh - 100px) ; */
+    /* height: auto; */
+    /* max-width: 1100px; */
+    /* background-color: aqua; */
+  }
+  
+  .swVideo .swiper-slide{
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(255, 255, 255); */
+  }
+  
+  .black{
+    background-color: black;
+  }
+  
+  .mosgreen{
+    background-color: rgb(68, 150, 99);
+  }
+  .white{
+    background-color: white;
+  }
+  
+  .swVideo video{
+    width: 100%;
+    height: auto;
+    /* height: calc(100vh - 100px) ; */
+    overflow: hidden;
+    object-fit: contain;
+    
+  }
+  
+  @media (max-width: 1170px){
+    .video-banner{
+      margin-top: 140px;
+      /* height: calc(100vh - 140px) ; */
+    }
+  
+  }
+  
+  @media (max-width: 768px){
+    .video-banner{
+      margin-top: 100px;
+      /* height: calc(100vh - 100px) ; */
+    }
+  
+  }
+  
+  
+/* 라인배너 */
+
+.line_banner {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+.line_container {
+  position: relative;
+  max-width: 1300px;
+  display: block;
+}
+.line_container > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+}
+
+.line_container > a > img {
+  width: 100%;
+  position: relative;
+
+}
+.line_container a > p {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+
+}
+.line_container a> p>span{
+    font-size: 14px;
+}
+/* 반응형 */
+@media (max-width: 950px) {
+  .line_container a> p{
+    top: 10%;
+  }
+  .line_container a> p>span {
+    font-size: 12px;
+
+  }
+  
+}
+  @media (max-width: 768px) {
+    .line_container a> p{
+      top: 5%;
+    }
+    .line_container a> p>span {
+      font-size: 10px;
+    }}
+    @media (max-width: 735px) {
+      .line_container a> p{
+        top: 1%;
+      }
+    }
+    @media (max-width: 500px) {
+      .line_banner{display: none;}
+    }
+
+  
