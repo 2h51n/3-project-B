@@ -103,6 +103,40 @@
   line-height: 1.2;
 }
 
+.product-item {
+  position: relative; /* 아이콘을 이미지 위에 위치시키기 위해 필요 */
+}
+
+/* 장바구니 아이콘 부분 */
+.add-to-cart {
+  position: absolute;
+  bottom: 20px; /* 필요에 따라 조정 */
+  right: 20px; /* 필요에 따라 조정 */
+  z-index: 10; /* 이미지 위에 표시되도록 */
+}
+
+.add-icon {
+  width: 40px; /* 아이콘 크기 조정 */
+  height: 40px;
+  cursor: pointer; /* 마우스 커서가 포인터로 변경 */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.add-icon:hover {
+  transform: scale(1.1); /* 호버 시 약간 확대 */
+}
+
+/* 아이콘 상태에 따른 스타일 */
+.add-icon.clicked {
+  opacity: 0; /* 클릭 시 디졸브 애니메이션 */
+  transition: opacity 0.3s ease; /* 디졸브 효과 */
+}
+
+.add-icon.change-icon {
+  opacity: 1;
+  content: url("images/like/cart_plus_like.png"); /* 아이콘 이미지 교체 */
+}
+
 /* 반응형 디자인 */
 
 /* 1024px 이하 */

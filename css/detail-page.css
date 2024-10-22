@@ -1,0 +1,91 @@
+@charset "utf-8";
+.detile-page{
+    width: 100%;
+}
+.detile_container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+    padding-top: 100px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+.caption {
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.product-info {
+    text-align: left;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: #e60000;
+}
+
+.shipping-info,
+.shipping-cost {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.shipping-cost span {
+    font-weight: bold;
+}
+
+/* 상품소개/브랜드 */
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #f1f1f1;
+    margin-right: 5px;
+  }
+  
+  .tab-button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* 상품 소개페이지 */
+  .tab-content img{
+    width: 100%;
+  }
