@@ -1,78 +1,4 @@
 window.onload = function () {
-<<<<<<< HEAD
-  // ===메인 배너 스와이퍼 슬라이드 영역 시작
-  const swBanner = new Swiper(".swBanner", {
-    loop: true, // loop : 무한으로 도는 것.
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false, // 상관없이 계속 autoplay.
-    },
-  });
-  // ===메인 배너 슬라이드 영역 끝
-
-
-  const swMaterial = new Swiper(".swMaterial", {
-    slidesPerView: 5, // 한 번에 3개의 슬라이드 표시
-    // loop: true,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false, // 상관없이 계속 autoplay.
-    // },
-
-});
-//   const swVideo = new Swiper(".swVideo", {
-//     slidesPerView: 1, // 한 번에 3개의 슬라이드 표시
-
-
-// });
-
-const materialSwiper = new Swiper(".swMaterial" ,{
-  slidesPerView: 5, // 한 번에 보여질 슬라이드 수
-    // loop: true,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false, // 상관없이 계속 autoplay.
-    // },
-});
-
-  const swReview = new Swiper(".swReview", {
-    slidesPerView: 1, 
-    spaceBetween: 20,
-    loop: true,
-
-
-    breakpoints: {
-      // 화면 너비가 320px 이상일 때
-      320: {
-        slidesPerView: 1.5,
-      },
-      // 화면 너비가 480px 이상일 때
-      480: {
-        slidesPerView: 2,
-      },
-      // 화면 너비가 768px 이상일 때
-      500: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      // 화면 너비가 1024px 이상일 때
-      950: {
-        slidesPerView: 3.5,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-
-
-
-});
-// ===슬라이드 영역 끝
-
-// 카테고리 텍스트메뉴 클릭 시 소재별 미니카테고리 나옴
-=======
   // ===메인 배너 스와이퍼 슬라이드 영역 시작===
   const swBanner = new Swiper(".swBanner", {
     loop: true, // 무한 루프
@@ -114,7 +40,6 @@ const materialSwiper = new Swiper(".swMaterial" ,{
   
 
   // 카테고리 텍스트메뉴 클릭 시 소재별 미니카테고리 나옴
->>>>>>> 7d7a5979d53774a7b202a75cd6ecf54144ba73e4
 const cateTitle = document.querySelectorAll(".category-title")
 const naviCate = document.querySelector(".navi-cate")
 // cateIcon.addEventListener("click", function(e){
@@ -271,9 +196,7 @@ window.addEventListener("resize", function () {
 
   videoReset();
  
-<<<<<<< HEAD
-=======
 
->>>>>>> 7d7a5979d53774a7b202a75cd6ecf54144ba73e4
 
-}
+  
+};
