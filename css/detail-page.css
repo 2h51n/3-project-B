@@ -2,6 +2,9 @@
 .detile-page{
     width: 100%;
 }
+.product-main{
+    margin-bottom: 10%;
+}
 .detile_container {
     max-width: 1300px;
     margin: 0 auto;
@@ -20,55 +23,55 @@
     align-items: center;
 }
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    flex-direction: column;
-}
 
-.caption {
+.product-brand {
     font-size: 14px;
     color: #666;
     text-align: left;
     margin-top: 10px;
 }
 
-.product-info {
+.product-info  {
     text-align: left;
     margin-top: 20px;
+    line-height: 20px;
 }
 
-h1 {
+.product-info > h1 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.price {
+.product-price {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.old-price {
+.product-old-price {
     text-decoration: line-through;
     color: #999;
     margin-right: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 10px;
 }
 
-.new-price {
+.product-new-price {
     color: #e60000;
 }
 
-.shipping-info,
-.shipping-cost {
+.product-shipping-info,
+.product-shipping-cost {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.shipping-cost span {
+.product-shipping-cost span {
     font-weight: bold;
 }
 
 /* 상품소개/브랜드 */
+
 .tab-button {
     padding: 10px 20px;
     cursor: pointer;
@@ -80,12 +83,17 @@ h1 {
   .tab-button:hover {
     background-color: #ddd;
   }
-  
+
   .tab-content {
     padding: 20px;
     border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end
   }
-  /* 상품 소개페이지 */
+
   .tab-content img{
     width: 100%;
   }
+
+ 
+
