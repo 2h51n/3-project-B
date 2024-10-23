@@ -22,6 +22,7 @@
 @import url(intro.css);
 @import url(notice.css);
 @import url(detail-page.css);
+@import url(login.css);
 
 /* 폰트 */
 @font-face {
@@ -98,7 +99,7 @@ select {
 h2.section-title {
   justify-content: center;
   font-size: 30px;
-  margin: 10% 0;
+  margin: 7% 0;
 }
 
 html{
