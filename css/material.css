@@ -46,7 +46,6 @@
 .swMaterial .swiper-slide img {
   height: 60px;
   margin: 0 auto;
-
 }
 
 .swMaterial .swiper-slide .scale {
@@ -105,9 +104,7 @@
   color: #333;
   font-size: 16px;
 }
-.materal-textbox {
-  width: auto;
-  /* padding: 0 10px; */
+
 }
 
 .materal-textbox * {
@@ -121,6 +118,7 @@
 .price_bold {
   font-weight: bold;
 }
+
 
 /* .material-goods-card > img{
     width: 295px;
@@ -156,8 +154,10 @@
 }
 
 .materal-textbox {
+
   padding: 10px;
   /* text-align: center; */
+
 }
 
 /* .material-goods-card img {
@@ -234,12 +234,14 @@
   .materal-textbox {
     text-align: center;
 
+
   }
   .material-goods-card a > img {
 
     height: 328.61px;
   }
 }
+
 
 /* 480px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 480px) {
@@ -255,7 +257,7 @@
   .material-goods {
     padding: 0 10%;
   }
-  .materal-textbox p{
+  .materal-textbox p {
     font-size: 14px;
   }
 
@@ -263,7 +265,7 @@
     font-size: 0.8rem; /* 폰트 크기를 줄임 */
   }
 
-  .hidden{
+  .hidden {
     display: none;
   }
 
@@ -296,6 +298,9 @@
   .more-link_m {
     display: block;
   }
+
+
+
 }
 
 /* 소재배너 */
@@ -318,12 +323,9 @@
 }
 
 
-.swiper-Banner{
-  background-color: #fdd835;
-}
 .swiper-Banner .swiper-slide {
   opacity: 0; /* 기본 오파시티 값 */
-  transition: all 1.8s ; /* 오파시티 전환 효과 */
+  transition: all 1.8s; /* 오파시티 전환 효과 */
 }
 
 .swiper-Banner .swiper-slide-active {
@@ -348,14 +350,14 @@
   display: none;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .b1920px {
     display: none;
   }
   .b768px {
     display: block;
   }
-  .slide-area{
+  .slide-area {
     max-width: 450px;
   }
   .b360px {
