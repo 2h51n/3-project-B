@@ -32,24 +32,23 @@
   text-decoration: underline;
 }
 
+.title-section .more-link {
+  display: flex;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+
 /* 브랜드 그리드 레이아웃 설정 */
 .brand-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 최소 250px에서 최대 1fr 크기까지 자동 조정 */
+  display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
 }
 
 .brand-item {
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.brand-item:hover {
-  transform: translateY(-5px);
+  padding-left: 3%;
+  flex: 1 1 calc(33.333% - 20px); /* 기본적으로 3개의 아이템을 표시 */
 }
 
 /* 메인 이미지 스타일 */
@@ -111,6 +110,10 @@
   gap: 10px;
   margin-top: 10px;
   justify-content: space-between;
+  cursor: pointer; /* 클릭 가능함을 알리기 위한 커서 */
+  transition: transform 1s ease; /* 호버 시 변환 효과 추가 */
+  object-fit: contain;
+  overflow: hidden;
 }
 
 .sub-images img {
@@ -126,7 +129,6 @@
   font-weight: bold;
   font-size: 20px;
 }
-
 /* 1024px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 1024px) {
   .main-image {
@@ -134,26 +136,46 @@
   }
   .sub-images img {
     width: calc(33.333% - 10px);
+    cursor: pointer;
     height: auto;
   }
 }
-
 /* 768px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 768px) {
   .main-image {
-    height: 200px;
+    grid-template-columns: repeat(2, 1fr); /* 768px 이하에서는 2열 */
+    height: 200px; /* 작은 화면에서 높이 감소 */
   }
   .brand-item {
-    padding: 5px;
+    flex: 1 1 calc(50% - 20px); /* 2개의 아이템 표시 */
+  }
+  /* 2개 이후의 아이템 숨기기 */
+  .brand-item:nth-child(n + 3) {
+    display: none;
   }
 }
-
-/* 480px 이하에서 레이아웃 조정 */
+/* 480px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 480px) {
   .main-image {
-    height: 350px;
+    height: 350px; /* 모바일 화면에서 높이 감소 */
   }
   .brand-item {
-    padding: 5px;
+    flex: 1 1 calc(100% - 20px); /* 1개의 아이템 표시 */
+  }
+  /* 1개 이후의 아이템 숨기기 */
+  .brand-item:nth-child(n + 2) {
+    display: none;
+  }
+  .brand-name {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+/* 360px 이하에서 메인 이미지 높이 조정 */
+@media (max-width: 360px) {
+  .main-image {
+    height: 300px; /* 매우 작은 화면에서 높이 감소 */
   }
 }
