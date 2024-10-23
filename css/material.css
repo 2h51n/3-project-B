@@ -45,7 +45,6 @@
 .swMaterial .swiper-slide img {
   height: 60px;
   margin: 0 auto;
-
 }
 
 .swMaterial .swiper-slide .scale {
@@ -103,8 +102,8 @@
   font-size: 16px;
   text-align: left;
 }
-.materal-textbox > p{
-padding: 5px 0 1px 0;
+.materal-textbox > p {
+  padding: 5px 0 1px 0;
 }
 
 .materal-textbox > p:first-child,
@@ -116,10 +115,9 @@ padding: 5px 0 1px 0;
 .price_bold {
   font-weight: bold;
 }
-.materal-rating{
+.materal-rating {
   padding-top: 5px;
 }
-
 
 .materal-rating > img {
   width: 55%;
@@ -132,7 +130,6 @@ padding: 5px 0 1px 0;
 
 .materal-textbox {
   padding: 5px;
-
 }
 
 .clothes,
@@ -189,7 +186,6 @@ padding: 5px 0 1px 0;
 
 /* 768px 이하 화면을 위한 미디어 쿼리 */
 
-
 /* 480px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 480px) {
   .swiper-slide img {
@@ -199,7 +195,7 @@ padding: 5px 0 1px 0;
   .material-goods {
     padding: 0 10%;
   }
-  .materal-textbox p{
+  .materal-textbox p {
     font-size: 14px;
   }
 
@@ -207,7 +203,7 @@ padding: 5px 0 1px 0;
     font-size: 0.8rem; /* 폰트 크기를 줄임 */
   }
 
-  .hidden{
+  .hidden {
     display: none;
   }
 
@@ -240,7 +236,6 @@ padding: 5px 0 1px 0;
     width: %; /* 아이콘의 너비를 화면의 40%로 설정 */
     /* height: 40px; */
   }
-
 }
 /* ========================================================== */
 /* 소재배너 */
@@ -261,11 +256,9 @@ padding: 5px 0 1px 0;
   margin: 0 auto;
 }
 
-
-
 .swiper-Banner .swiper-slide {
   opacity: 0; /* 기본 오파시티 값 */
-  transition: all 1.8s ; /* 오파시티 전환 효과 */
+  transition: all 1.8s; /* 오파시티 전환 효과 */
 }
 
 .swiper-Banner .swiper-slide-active {
@@ -290,18 +283,17 @@ padding: 5px 0 1px 0;
   display: none;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .b1920px {
     display: none;
   }
   .b768px {
     display: block;
   }
-  .slide-area{
+  .slide-area {
     max-width: 450px;
   }
   .b360px {
     display: none;
   }
 }
-
