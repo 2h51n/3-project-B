@@ -15,6 +15,7 @@
   max-width: 1000px;
   background-color: #fff;
   margin: 40px auto;
+  /* margin-top: 40px; */
   justify-content: space-between;
 }
 
@@ -69,7 +70,7 @@
   /* background-color: darkcyan; */
   justify-content: center;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 4%;
 }
 .material-goods-card {
   display: block;
@@ -83,47 +84,71 @@
   border: 1px solid #ddd;
   padding: 5px;
   margin: 5% 0;
-  text-align: center;
+  /* text-align: center; */
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 .material-goods-card a > img {
   width: 100%;
   object-fit: cover;
+  height: 210px;
 }
 
 .material-goods-card a {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 5px;
+  /* padding: 5px; */
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  text-align: left;
 }
-.materal-textbox > p{
-padding: 5px 0 1px 0;
+.materal-textbox {
+  width: auto;
+  /* padding: 0 10px; */
 }
 
+.materal-textbox * {
+  margin: 4px 0;
+}
 .materal-textbox > p:first-child,
 .materal-rating > span {
   font-size: 12px;
-  padding-bottom: 1px;
 }
 
 .price_bold {
   font-weight: bold;
 }
-.materal-rating{
-  padding-top: 5px;
+
+/* .material-goods-card > img{
+    width: 295px;
+    margin: 0 auto;
+} */
+.materal-rating {
+  display: flex;
+  justify-content: center;
 }
 
+.materal-rating span{
+    font-weight: bold;
+}
 
 .materal-rating > img {
-  width: 55%;
+  width: auto;
+  /* height: 100%; */
+  /* max-height: 20px; */
+  object-fit: contain;
+  margin: 0;
 }
+
+/* .material-goods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+} */
 
 .material-goods-card {
   flex: 1 1 calc(25% - 20px);
@@ -131,9 +156,16 @@ padding: 5px 0 1px 0;
 }
 
 .materal-textbox {
-  padding: 5px;
-
+  padding: 10px;
+  /* text-align: center; */
 }
+
+/* .material-goods-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  } */
 
 .clothes,
 .wood,
@@ -173,11 +205,21 @@ padding: 5px 0 1px 0;
   display: none;
 }
 
+.m_title{
+  font-size: 14px;
+  font-weight: 800;
+}
+
 /* 1024px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 1024px) {
   .material-goods-card {
     flex: 1 1 calc(50% - 20px); /* 3개의 아이템 표시 */
   }
+  .material-goods-card a > img {
+
+    height: 433px;
+  }
+
 }
 
 /* 880px 이하 화면을 위한 미디어 쿼리 */
@@ -188,12 +230,26 @@ padding: 5px 0 1px 0;
 }
 
 /* 768px 이하 화면을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+  .materal-textbox {
+    text-align: center;
 
+  }
+  .material-goods-card a > img {
+
+    height: 328.61px;
+  }
+}
 
 /* 480px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 480px) {
   .swiper-slide img {
     width: 60%; /* 아이콘의 너비를 화면의 40%로 설정 */
+  }
+
+  .material-goods-card a > img {
+
+    height: 372px;
   }
 
   .material-goods {
@@ -228,30 +284,30 @@ padding: 5px 0 1px 0;
     gap: 10px; /* 그리드 아이템 간의 간격 */
   }
 
+  .material-goods-card a > img {
+
+    height: 276px;
+  }
+
   .material-goods-card {
     flex: unset; /* Flex 속성 제거 */
     width: 100%; /* 카드가 전체 너비를 차지하도록 설정 */
   }
-
   .more-link_m {
     display: block;
   }
-  .swiper-slide a > img {
-    width: %; /* 아이콘의 너비를 화면의 40%로 설정 */
-    /* height: 40px; */
-  }
-
 }
-/* ========================================================== */
+
 /* 소재배너 */
 .banner {
+  border: 1px dashed #ccc;
   display: block;
   width: 100%;
   /* height: auto; */
   margin-top: 70px;
   /* max-width: 1100px; */
   /* background-color: aqua; */
-  box-shadow: 0 5px 5px -5px #333;
+  z-index: 9999;
 }
 
 .banner-slide-area {
@@ -262,7 +318,9 @@ padding: 5px 0 1px 0;
 }
 
 
-
+.swiper-Banner{
+  background-color: #fdd835;
+}
 .swiper-Banner .swiper-slide {
   opacity: 0; /* 기본 오파시티 값 */
   transition: all 1.8s ; /* 오파시티 전환 효과 */
@@ -304,4 +362,3 @@ padding: 5px 0 1px 0;
     display: none;
   }
 }
-
