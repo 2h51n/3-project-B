@@ -291,40 +291,41 @@
       <section class="detile-page">
         <div class="detile_container">
           <div class="breadcrumb">홈 > 카테고리 > 유리</div>
-          <div class="image-container">
-            <img src="images/detail/pd_img (12).png" alt="바다 유리 선캐쳐" />
-            <p class="caption">바다 한 조각</p>
-          </div>
-          <div class="product-info">
-            <h1>바다 유리 선캐쳐</h1>
-            <p class="price">
-              <span class="old-price">39,000원</span>
-              <span class="new-price">35,000원</span>
-            </p>
+          <div class="product-container">
+            <div class="product-main">
+              <img src="images/detail/pd_img (12).png" alt="바다 유리 선캐쳐" />
+              <p class="product-brand">바다 한 조각</p>
+              <div class="product-info">
+                <h1>바다 유리 선캐쳐</h1>
+                <p class="product-price">
+                  <span class="product-old-price">39,000원</span>
+                  <span class="product-new-price">35,000원</span>
+                </p>
+  
+                <p class="product-shipping-info">배송정보: 영업일 기준으로 2-3일 소요됩니다.</p>
+                <p class="product-shipping-cost">
+                  배송비: <span>3,000원</span> <br />5만원 이상 구매 시 무료배송
+                </p>
+              </div>
+            </div>
 
-            <p class="shipping-info">배송정보: 영업일 기준으로 2-3일 소요됩니다.</p>
-            <p class="shipping-cost">
-              배송비: <span>3,000원</span> <br />
-              5만원 이상 구매 시 무료배송
-            </p>
+          </div>
+          <!-- 상품소개/브랜드 -->
+          <!-- 상품소개페이지 -->
+          <div class="tab-container">
+            <button class="tab-button" onclick="showTab('description')">상품 설명</button>
+            <button class="tab-button" onclick="showTab('brand')">브랜드 소개</button>
+          </div>
+
+          <div class="tab-content" id="description">
+            <img src="images/detail/suncatcher.png" alt="상품설명" />
+          </div>
+
+          <div class="tab-content" id="brand" style="display: none">
+            <h2>브랜드 소개</h2>
+            <img src="images/detail/suncatcher-brand.png" alt="브랜드" />
           </div>
         </div>
-
-  <!-- 상품소개/브랜드 -->
-   <!-- 상품소개페이지 -->
-  <div class="tab-container">
-    <button class="tab-button" onclick="showTab('description')">상품 설명</button>
-    <button class="tab-button" onclick="showTab('brand')">브랜드 소개</button>
-  </div>
-  
-  <div class="tab-content" id="description">
-    <img src="images/detail/suncatcher.png" alt="상품설명">
-  </div>
-  
-  <div class="tab-content" id="brand" style="display:none;">
-    <h2>브랜드 소개</h2>
-    <p>이곳에 브랜드 소개 내용을 입력하세요.</p>
-  </div>
       </section>
 
       <!-- 푸터 영역-->
