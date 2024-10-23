@@ -54,17 +54,17 @@
     <link rel="stylesheet" href="css/header.css" />
     <title>환경을 살리는 소비 'JUNKY FUNKY!'</title>
     <style>
-      html{
+      html {
         scroll-behavior: smooth;
       }
-      .main{
+      .main {
         width: 100%;
         /* max-width: 1300px; */
         margin-top: 200px;
         display: block;
         /* background-color: antiquewhite; */
       }
-      .inner{
+      .inner {
         /* width: 100%; */
         max-width: 1300px;
         margin: 0 auto;
@@ -77,25 +77,36 @@
         width: 100%;
         font-family: "Noto Sans KR";
       }
-      hr{
+
+      hr {
         width: 70%;
         margin: 0 auto;
         margin-top: 40px;
       }
       .notice-board {
-        width: 80%;
+        width: 70%;
         max-width: 1000px;
         margin: 50px auto;
-        border-collapse: collapse;
+        border-collapse: separate; /* 경계를 분리 */
+    border-spacing: 0; /* 셀 간격을 없앰 */
+    border: 1px solid #ddd; /* 테이블 경계 */
+    border-radius: 10px; /* 테이블 모서리에 둥근 효과 */
+    overflow: hidden; /* 둥근 모서리 효과를 적용하기 위해 필요 */
+        
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
         /* background-color: aqua; */
       }
+
       .notice-board th,
       .notice-board td {
         padding: 10px;
         border: 1px solid #ddd;
       }
 
-      .notice-board td:first-child{
+      .notice-board td:first-child {
         text-align: center;
       }
       .pagination {
@@ -113,6 +124,29 @@
       .pagination li.active {
         background-color: #333;
         color: #fff;
+      }
+      #noticeList tr {
+        text-decoration: none;
+        color: #333;
+      }
+
+      #noticeList td:nth-child(2) {
+        width: 100%;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+      #noticeList td:nth-child(2) a {
+    display: block; /* 또는 inline-block */
+    /* max-width: 150px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+      #noticeList tr td:nth-child(2):hover {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -280,7 +314,7 @@
             <li><a href="index.html#popular">인기</a></li>
             <li><a href="index.html#brands">브랜드</a></li>
             <li><a href="index.html#review">리뷰</a></li>
-            <li><a href="#">소개</a></li>
+            <li><a href="about_us.html">소개</a></li>
             <!-- <li><a href="notice.html">공지사항</a></li> -->
           </ul>
           <div class="head-logo">
@@ -299,7 +333,7 @@
               <div class="searchMB">
                 <a href="#">
                   <img src="images/A/icon/popup-icon/serach_bar.svg" alt="서치 아이콘" class="search_icon" />
-                  <input type="text">
+                  <input type="text" />
                 </a>
               </div>
               <div class="loginBt">
@@ -324,7 +358,7 @@
             <li><a href="index.html#popular">인기</a></li>
             <li><a href="index.html#brands">브랜드</a></li>
             <li><a href="index.html#review">리뷰</a></li>
-            <li><a href="#">소개</a></li>
+            <li><a href="about_us.html">소개</a></li>
             <!-- <li><a href="notice.html">공지사항</a></li> -->
           </ul>
         </div>
@@ -333,7 +367,7 @@
     <section class="main">
       <div class="inner">
         <h1>NOTICE</h1>
-        <hr>
+        <hr />
         <!-- 공지사항 게시판 -->
         <table class="notice-board">
           <!-- thead: 타이틀헤드, tr : 테이블 가로, td: 테이블 데이터 -->
@@ -352,124 +386,104 @@
         <ul class="pagination" id="pagination">
           <!-- js 출력 -->
         </ul>
-      </section>
-
       </div>
+    </section>
 
     <script>
-      // 예시 공지사항 데이터
-      const notices = [
-        { id: 1, title: "공지사항 1", date: "2024-10-01" },
-        { id: 2, title: "공지사항 2", date: "2024-09-30" },
-        { id: 3, title: "공지사항 3", date: "2024-09-29" },
-        { id: 4, title: "공지사항 4", date: "2024-09-28" },
-        { id: 5, title: "공지사항 5", date: "2024-09-27" },
-        { id: 6, title: "공지사항 6", date: "2024-09-26" },
-        { id: 7, title: "공지사항 7", date: "2024-09-25" },
-        { id: 8, title: "공지사항 8", date: "2024-09-24" },
-        { id: 9, title: "공지사항 9", date: "2024-09-23" },
-        { id: 10, title: "공지사항 10", date: "2024-09-22" },
-        { id: 11, title: "공지사항 11", date: "2024-09-21" },
-        { id: 12, title: "공지사항 12", date: "2024-09-20" },
-        { id: 1, title: "공지사항 1", date: "2024-10-01" },
-        { id: 2, title: "공지사항 2", date: "2024-09-30" },
-        { id: 3, title: "공지사항 3", date: "2024-09-29" },
-        { id: 4, title: "공지사항 4", date: "2024-09-28" },
-        { id: 5, title: "공지사항 5", date: "2024-09-27" },
-        { id: 6, title: "공지사항 6", date: "2024-09-26" },
-        { id: 7, title: "공지사항 7", date: "2024-09-25" },
-        { id: 8, title: "공지사항 8", date: "2024-09-24" },
-        { id: 9, title: "공지사항 9", date: "2024-09-23" },
-        { id: 10, title: "공지사항 10", date: "2024-09-22" },
-        { id: 11, title: "공지사항 11", date: "2024-09-21" },
-        { id: 12, title: "공지사항 12", date: "2024-09-20" },
-      ];
-      //   페이지당 표시할 항목 수
       const itemsPerPage = 12;
-      let currentPage = 1; // 가장 먼저 보여지는 페이지(1)
-      const totalPages = Math.ceil(notices.length / itemsPerPage);
-      // console.log(totalPages); // 3
-      // 공지사항 목록을 출력하는 함수
-      function displayNotices(notice, page, itemsPerpage) {
-        // console.log(itemsPerpage);
+      let currentPage = 1;
+      let notices = [];
+
+      // JSON 파일 불러오기
+      fetch("notice.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("네트워크 응답에 문제가 있습니다.");
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          notices = data;
+          const totalPages = Math.ceil(notices.length / itemsPerPage);
+          displayNotices(currentPage);
+          displayPagination(totalPages);
+        })
+        .catch((error) => {
+          console.error("데이터를 불러오는 중 오류 발생:", error);
+        });
+
+      // 공지사항 목록 출력
+      function displayNotices(page) {
         const noticeList = document.getElementById("noticeList");
-        const start = (page - 1) * itemsPerpage;
-        // console.log(start);
-        const pageNotices = notices.slice(start, start + itemsPerpage);
-        // console.log(pageNotices);
+        const start = (page - 1) * itemsPerPage;
+        const pageNotices = notices.slice(start, start + itemsPerPage);
         noticeList.innerHTML = pageNotices
           .map(
-            (item, index) =>
-              //   console.log(item);
-              `
-        <tr>
-            <td> ${start + index + 1} </td>
-            <td> ${item.title} </td>
-            <td> ${item.date} </td>
-        </tr>
-
-        `
+            (item, index) => `
+              <tr>
+                <td>${start + index + 1}</td>
+                <td style="max-width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+    <a href="${item.link}" style="text-decoration: none; color: #333; display: block; width: 100%;">
+        ${item.title}
+    </a>
+</td>
+                <td>${item.date}</td>
+              </tr>`
           )
           .join("");
       }
-      //   페이지네이션 버튼을 출력하는 함수
-      function displayPagination(totalPg, currentPg) {
-        // console.log(totalPg);
-        // console.log(currentPg);
+
+      // 페이지네이션 버튼 생성
+      function displayPagination(totalPages) {
         const paginationUL = document.getElementById("pagination");
         paginationUL.innerHTML = ""; // 기존 페이지네이션 초기화
-        // 이전 버튼
+
         const prevBtn = document.createElement("li");
         prevBtn.textContent = "이전";
         prevBtn.addEventListener("click", () => {
           if (currentPage > 1) {
             currentPage--;
-            displayNotices(notices, currentPage, itemsPerPage);
-            audatPaginationUI();
+            displayNotices(currentPage);
+            updatePaginationUI();
           }
         });
         paginationUL.appendChild(prevBtn);
-        // 페이지 번호 버튼 생성
-        for (let i = 1; i <= totalPg; i++) {
+
+        for (let i = 1; i <= totalPages; i++) {
           const li = document.createElement("li");
           li.textContent = i;
           li.addEventListener("click", () => {
             currentPage = i;
-            // console.log(currentPg);
-            li.classList.add(i === currentPage ? "active" : "");
-            displayNotices(notices, currentPage, itemsPerPage);
-            audatPaginationUI();
+            displayNotices(currentPage);
+            updatePaginationUI();
           });
+
+          if (i === currentPage) {
+            li.classList.add("active");
+          }
+
           paginationUL.appendChild(li);
         }
-        // 다음 페이지 버튼
+
         const nextBtn = document.createElement("li");
         nextBtn.textContent = "다음";
         nextBtn.addEventListener("click", () => {
-          if (currentPage < totalPg) {
+          if (currentPage < totalPages) {
             currentPage++;
-            displayNotices(notices, currentPage, itemsPerPage);
-            displayPagination(totalPages, currentPage);
-            audatPaginationUI();
+            displayNotices(currentPage);
+            updatePaginationUI();
           }
         });
         paginationUL.appendChild(nextBtn);
       }
-      //   페이지네이션 ul 업데이트 (각 페이지 번호 클릭시 할당된 목록만 표시)
-      function audatPaginationUI() {
-        const paginationItems = document.querySelectorAll("#pagination li");
-        paginationItems.forEach((item, index) => {
-          console.log(item);
-          if (index === currentPage) {
-            item.classList.add("active");
-          } else {
-            item.classList.remove("active");
-          }
+
+      // 페이지네이션 UI 업데이트
+      function updatePaginationUI() {
+        const paginationUL = document.getElementById("pagination");
+        Array.from(paginationUL.children).forEach((li, index) => {
+          li.classList.toggle("active", index === currentPage);
         });
       }
-      // 공지사항 목록 화면에 호출
-      displayNotices(notices, currentPage, itemsPerPage);
-      displayPagination(totalPages, currentPage);
     </script>
   </body>
 </html>
