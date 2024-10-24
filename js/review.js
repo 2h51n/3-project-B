@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   const reviewSwiper = new Swiper(".swReview", {
-    slidesPerView: 5,
+    slidesPerView: 1,
     spaceBetween: 20, // 슬라이드 간 간격
     loop: true, // 슬라이드가 무한 반복되도록 설정
     autoplay: {

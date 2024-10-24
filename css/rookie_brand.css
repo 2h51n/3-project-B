@@ -144,7 +144,7 @@
 @media (max-width: 768px) {
   .main-image {
     grid-template-columns: repeat(2, 1fr); /* 768px 이하에서는 2열 */
-    height: 200px; /* 작은 화면에서 높이 감소 */
+    /* height: 200px;  */
   }
   .brand-item {
     flex: 1 1 calc(50% - 20px); /* 2개의 아이템 표시 */
@@ -157,7 +157,7 @@
 /* 480px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 480px) {
   .main-image {
-    height: 350px; /* 모바일 화면에서 높이 감소 */
+    height: 300px; 
   }
   .brand-item {
     flex: 1 1 calc(100% - 20px); /* 1개의 아이템 표시 */
@@ -176,6 +176,6 @@
 /* 360px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 360px) {
   .main-image {
-    height: 300px; /* 매우 작은 화면에서 높이 감소 */
+    height: 280px; 
   }
 }
