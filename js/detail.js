@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const detailImg = document.querySelectorAll(".tab-button");
+window.addEventListener("load", function () {
+  let detailImg = document.querySelectorAll(".detile-tab-button");
   const cards = document.querySelectorAll(".card");
   console.log(detailImg);
   console.log(cards);
 
   //   로드시 활성화 메뉴랑 카드 index[0]
   //
-  detailImg[0].classList.add("active");
-  cards[0].classList.add("active");
+  // detailImg[0].classList.add("active");
+  // cards[0].classList.add("active");
 
   detailImg.forEach(function (detailImg, index) {
     // console.log(menuItem);
