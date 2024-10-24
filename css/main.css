@@ -80,6 +80,11 @@ select {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth; /* 부드러운 스크롤을 위한 CSS */
+}
+
+
 /* 초기화 */
 * {
   margin: 0;

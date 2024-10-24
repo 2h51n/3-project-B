@@ -53,6 +53,7 @@
     <script src="js/detail.js"></script>
     <script src="js/login.js"></script>
     <script src="js/coupon.js"></script>
+    <script src="js/search.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
     <title>B안 JUNKY FUNKY</title>
@@ -63,7 +64,7 @@
       <div class="modal-content">
         <h2 style="font-size: 30px; text-align: center">로그인</h2>
         <form id="loginForm">
-          <input type="email" id="email" placeholder="이메일" required class="input-field" />
+          <input type="text" id="userId" placeholder="아이디" required class="input-field" />
           <input type="password" id="password" placeholder="비밀번호" required class="input-field" />
           <div class="remember-me">
             <input type="checkbox" id="rememberMe" />
@@ -142,6 +143,32 @@
           </div>
         </form>
       </div>
+    </div>
+    <!-- ID/PW 회원가입 폼 -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <h2 style="font-size: 30px; text-align: center">회원가입</h2>
+        <form id="signupForm">
+          <input type="text" name="userId" id="signupId" placeholder="아이디" required class="input-field" />
+          <input type="email" name="userEmail" id="signupEmail" placeholder="이메일" required class="input-field" />
+          <input type="password" name="passWord" id="signupPassword" placeholder="비밀번호" required class="input-field" />
+          <input type="tel" name="userPhone" id="signupPhone" placeholder="휴대폰 번호" required class="input-field" />
+          <button type="submit" class="signup-button">회원가입</button>
+          <button type="button" class="close-btn">&times;</button>
+        </form>
+      </div>
+    </div>
+    <!-- 로그인 알림 팝업 -->
+    <div id="loginAlert" class="coupon-alert fade-out">
+      <p>이미 로그인이 되어 있습니다.</p>
+      <button class="close-alert-btn">&times;</button>
+    </div>
+    <!-- 로그인 환영 팝업 -->
+    <div id="welcomePopup" style="display: none; position: fixed; top: 50%; right: 2%; background: white; padding: 20px; border: 1px solid #ccc; z-index: 1000">
+      <div id="welcomeMessage"></div>
+      <button class="logout-button">로그아웃</button>
+      <span class="close-popup" style="cursor: pointer; float: right; font-size: 20px">×</span>
+      <!-- X 버튼 추가 -->
     </div>
     <!-- 모달 구조 -->
     <div id="myModal" class="modal" style="display: none">
@@ -360,8 +387,8 @@
           </div>
           <div class="header-right">
             <div class="head-search">
-              <input type="text" placeholder="검색어를 입력해주세요" />
-              <a href="#">
+              <input type="text" placeholder="검색어를 입력해주세요" id="searchInput" />
+              <a href="#" id="searchBtn">
                 <img src="images/A/icon/popup-icon/serach_bar.svg" alt="서치 아이콘" class="search_icon" />
               </a>
             </div>
@@ -375,13 +402,11 @@
               <div class="loginBt">
                 <a href="#">
                   <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
-                  <!-- <span>로그인</span> -->
                 </a>
               </div>
               <div class="cartBt">
                 <a href="#">
                   <img src="images/A/icon/popup-icon/cart-icon.svg" alt="카트 아이콘" />
-                  <!-- <span>카트</span> -->
                 </a>
               </div>
             </div>
@@ -426,7 +451,7 @@
       </div>
     </div>
     <!-- 쿠폰 -->
-    <section class="coupon-section" id="event">
+    <section class="coupon-section searchable" id="event">
       <div class="coupon_container">
         <h2 class="section-title">이달의 쿠폰</h2>
         <div class="coupon-list">
@@ -450,7 +475,11 @@
       </div>
     </section>
     <!-- 쿠폰 알림 메시지 -->
-    <div id="couponAlert" class="coupon-alert" style="display: none">로그인 또는 회원가입을 해주세요</div>
+    <div id="couponAlert" class="coupon-alert" style="display: none">
+      쿠폰이 지급 예정입니다. <br />
+      <br />
+      로그인 또는 회원가입을 해주세요
+    </div>
     <!-- 라인배너 영역 -->
     <!-- <div class="line_banner">
         <div class="line_container">
@@ -462,7 +491,7 @@
       </div> -->
     <!-- 메인 영역 시작 -->
     <!-- 루키 브랜드 -->
-    <section class="rookie-brands" id="brands">
+    <section class="rookie-brands searchable" id="brands">
       <div class="rookie_container">
         <h2 class="section-title">지금 주목받는 루키 브랜드</h2>
         <a href="#" class="more-link">더 보기</a>
@@ -521,7 +550,7 @@
       </div>
     </section>
     <!-- 배너 영역 -->
-    <div class="banner">
+    <div class="banner searchable" >
       <!-- 배너 슬라이드 -->
       <div class="banner-slide-area">
         <div class="swiper Banner">
@@ -561,7 +590,7 @@
       </div>
     </div>
     <!-- 소재별 카테고리 영역 -->
-    <div class="material-area">
+    <div class="material-area searchable">
       <h2 class="section-title">소재별 카테고리</h2>
       <!-- 소재목록 슬라이드 -->
       <div class="material-slide-area">
@@ -907,7 +936,7 @@
       </div>
     </div>
     <!-- 인기 아이템 -->
-    <section class="popular-items-section" id="popular">
+    <section class="popular-items-section searchable"  id="popular">
       <div class="container">
         <h2 class="section-title">인기 아이템</h2>
         <a href="#" class="more-link">더 보기</a>
@@ -1046,7 +1075,7 @@
       </div>
     </div>
     <!-- 리뷰 영역 -->
-    <section class="review-section" id="review">
+    <section class="review-section searchable" id="review">
       <div class="review-container">
         <h2 class="section-title">정키펑키 유저 리뷰</h2>
         <!-- 스와이퍼 슬라이더 -->
@@ -1116,7 +1145,7 @@
       </div>
     </section>
     <!-- 바로가기 -->
-    <section class="notice_banner">
+    <section class="notice_banner searchable">
       <div class="notice_container">
         <h2 class="section-title">정키펑키 소식</h2>
         <div class="swiper notice_swiper">
