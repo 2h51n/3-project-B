@@ -86,7 +86,6 @@
   /* text-align: center; */
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
 }
 
 .material-goods-card a > img {
@@ -107,7 +106,6 @@
 }
 
 
-
 .materal-textbox * {
   margin: 8px 0;
 }
@@ -120,7 +118,6 @@
   font-weight: bold;
 }
 
-
 /* .material-goods-card > img{
     width: 295px;
     margin: 0 auto;
@@ -130,8 +127,8 @@
   justify-content: left;
 }
 
-.materal-rating span{
-    font-weight: bold;
+.materal-rating span {
+  font-weight: bold;
 }
 
 .materal-rating > img {
@@ -157,7 +154,6 @@
 .materal-textbox {
   padding: 10px;
   /* text-align: center; */
-
 }
 
 /* .material-goods-card img {
@@ -205,7 +201,7 @@
   display: none;
 }
 
-.m_title{
+.m_title {
   font-size: 14px;
   font-weight: 800;
 }
@@ -216,10 +212,8 @@
     flex: 1 1 calc(50% - 20px); /* 3개의 아이템 표시 */
   }
   .material-goods-card a > img {
-
     height: 433px;
   }
-
 }
 
 /* 880px 이하 화면을 위한 미디어 쿼리 */
@@ -233,15 +227,11 @@
 @media (max-width: 768px) {
   .materal-textbox {
     text-align: center;
-
-
   }
   .material-goods-card a > img {
-
     height: 328.61px;
   }
 }
-
 
 /* 480px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 480px) {
@@ -250,7 +240,6 @@
   }
 
   .material-goods-card a > img {
-
     height: 372px;
   }
 
@@ -288,7 +277,6 @@
   }
 
   .material-goods-card a > img {
-
     height: 276px;
   }
 
@@ -299,9 +287,6 @@
   .more-link_m {
     display: block;
   }
-
-
-
 }
 
 /* 소재배너 */
@@ -322,7 +307,6 @@
   max-width: 1150px;
   margin: 0 auto;
 }
-
 
 .swiper-Banner .swiper-slide {
   opacity: 0; /* 기본 오파시티 값 */

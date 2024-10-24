@@ -52,6 +52,7 @@
     <script src="js/fix-btn.js"></script>
     <script src="js/detail.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/coupon.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
     <title>B안 JUNKY FUNKY</title>
@@ -266,7 +267,7 @@
                       <!-- <li><a href="notice.html">공지사항</a></li> -->
                     </ul>
                   </div>
-                  <hr />
+                  <!-- <hr /> -->
                   <div class="side-bottom">
                     <h3 class="side-bottom-title">카테고리</h3>
                     <ul class="side-bottom-menu">
@@ -349,8 +350,8 @@
             <!-- <li><a href="#">구독</a></li> -->
             <li><a href="#brands">브랜드</a></li>
             <li><a href="#review">리뷰</a></li>
-            <li><a href="#">소개</a></li>
-            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="about_us.html">소개</a></li>
+            <li><a href="notice copy.html">공지사항</a></li>
           </ul>
           <div class="head-logo">
             <a href="index.html">
@@ -394,8 +395,8 @@
             <!-- <li><a href="#">구독</a></li> -->
             <li><a href="#brands">브랜드</a></li>
             <li><a href="#review">리뷰</a></li>
-            <li><a href="#">소개</a></li>
-            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="about_us.html">소개</a></li>
+            <li><a href="notice copy.html">공지사항</a></li>
           </ul>
         </div>
       </div>
@@ -406,12 +407,12 @@
         <div class="swiper swVideo">
           <div class="swiper-wrapper">
             <div class="swiper-slide black">
-              <video loop muted>
+              <video playsinline loop muted>
                 <source src="/video/video1.mp4" type="video/mp4" />
               </video>
             </div>
             <div class="swiper-slide mosgreen">
-              <video loop muted>
+              <video playsinline loop muted>
                 <source src="/video/video2.mp4" type="video/mp4" />
               </video>
             </div>
@@ -429,25 +430,31 @@
       <div class="coupon_container">
         <h2 class="section-title">이달의 쿠폰</h2>
         <div class="coupon-list">
-          <a href="login.html" class="coupon-item">
+          <a href="#" class="coupon-item" data-coupon="1">
             <img src="images/B/coupon/1920_coupon1.png" alt="쿠폰" />
             <div class="overlay">쿠폰받기</div>
           </a>
-          <a href="login.html" class="coupon-item">
+          <a href="#" class="coupon-item" data-coupon="2">
             <img src="images/B/coupon/1920_coupon2.png" alt="쿠폰" />
             <div class="overlay">쿠폰받기</div>
           </a>
-          <a href="login.html" class="coupon-item">
+          <a href="#" class="coupon-item" data-coupon="3">
             <img src="images/B/coupon/1920_coupon3.png" alt="쿠폰" />
             <div class="overlay">쿠폰받기</div>
           </a>
-          <a href="login.html" class="coupon-item">
+          <a href="#" class="coupon-item" data-coupon="4">
             <img src="images/B/coupon/1920_coupon4.png" alt="쿠폰" />
             <div class="overlay">쿠폰받기</div>
           </a>
         </div>
       </div>
     </section>
+    <!-- 쿠폰 알림 메시지 -->
+    <div id="couponAlert" class="coupon-alert" style="display: none">
+      쿠폰이 지급되었습니다! <br />
+      <br />
+      로그인 또는 회원가입을 해주세요
+    </div>
     <!-- 라인배너 영역 -->
     <!-- <div class="line_banner">
         <div class="line_container">
@@ -617,9 +624,7 @@
                   <img src="images/material images/plastic02.png" alt="소재별 굿즈 02" />
                   <div class="materal-textbox">
                     <p>ODD.TRAIN</p>
-
                     <p>CALENDAR 2024</p>
-
                     <p><span class="price_bold">56,000원</span></p>
                     <div class="materal-rating">
                       <img src="images/A/icon/section-icon/rating-icon.svg" alt="별점" />
@@ -1040,7 +1045,8 @@
       <div class="popup-content">
         <h2>장바구니 내용</h2>
         <ul id="cartItemsList"></ul>
-        <!-- <button onclick="closeCartPopup()">닫기</button> -->
+        <button onclick="closeCartPopup()">닫기</button>
+        <!-- 클로즈 버튼 추가 -->
       </div>
     </div>
     <!-- 리뷰 영역 -->
