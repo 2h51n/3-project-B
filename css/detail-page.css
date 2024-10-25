@@ -9,8 +9,14 @@
 }
 .detile-product-main {
   margin-bottom: 10%;
+  display: flex;
+  justify-content: space-between;
 }
-.detile-product-main img {
+.detile-product-main-left {
+  width: 60%;
+  background-color: aqua;
+}
+.detile-product-main-left img {
   width: 100%;
 }
 .detile-breadcrumb {
@@ -34,9 +40,11 @@
 }
 
 .detile-product-info {
+  width: 30%;
   text-align: left;
   margin-top: 20px;
   line-height: 20px;
+  background-color: cadetblue;
 }
 
 .detile-product-info > h1 {
@@ -82,18 +90,20 @@
   padding: 0 20px;
 }
 /* 상품소개/브랜드 */
-.detile-tab-container {
-    display: flex;
-    justify-content: space-around
+.detile-tab-content {
+  display: none;
+}
+.detile-tab-container.active {
+  display: flex;
+  justify-content: space-around;
 }
 
 .detile-tab-button {
   padding: 10px;
   cursor: pointer;
   border: none;
-  background-color: #f1f1f100;
+  background-color: #c74c4c00;
 }
-
 
 .detile-tab-content {
   padding: 20px;
@@ -104,29 +114,7 @@
 .detile-tab-content img {
   width: 100%;
 }
-
+#description-tab {
+  background-color: brown;
+}
 /* 더 보기 */
-
-/* .image-container {
-  width: 100%;
-  max-height: 500px;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-#mainImage {
-  width: 100%;
-  display: block;
-}
-
-#loadMoreImageBtn {
-  background-color: #ffd233;
-  border-radius: 10px;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-#loadMoreImageBtn:hover {
-  background-color: #b89723;
-} */
