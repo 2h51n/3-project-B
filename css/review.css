@@ -102,6 +102,17 @@
   width: calc(100% - 7%);
 }
 
+.swReview .swiper-slide {
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.5; 
+  transform: scale(0.8); 
+}
+
+.swReview .swiper-slide.swiper-slide-active {
+  opacity: 1; 
+  transform: scale(1); 
+}
+
 /* 1024px 이하에서 3열 레이아웃 */
 @media (max-width: 1024px) {
   .review-item {
