@@ -1,56 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO 적용 -->
-    <meta name="description" content="정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
-    <meta name="keywords" content="정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
-    <meta property="og:title" content="환경을 살리는 소비 'JUNKY FUNKY!',정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
-    <meta property="og:description" content="환경을 살리는 소비 'JUNKY FUNKY!', 정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
-    <!-- 버셀 주소 -->
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="환경을 살리는 소비 'JUNKY FUNKY!'" />
-    <meta property="og:type" content="website" />
-    <!-- 파비콘 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png" />
-    <link rel="manifest" href="images/favicon//site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- css적용 -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <!-- swiper css적용 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <!-- js -->
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <script src="js/jquery-1.12.3.js"></script>
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- AOS.js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- js -->
-    <script src="js/main.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/material.js"></script>
-    <script src="js/rookie_brand.js"></script>
-    <script src="js/review.js"></script>
-    <script src="js/notice.js"></script>
-    <script src="js/popular_item.js"></script>
-    <script src="js/banner.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/fix-btn.js"></script>
-    <script src="js/video.js"></script>
+   
+
+    <script src="js/detail.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
     <title>상품상세페이지</title>
@@ -294,8 +247,10 @@
           <div class="detile-breadcrumb">홈 > 카테고리 > 유리</div>
           <div class="detile-product-container">
             <div class="detile-product-main">
-              <img src="images/detail/pd_img (12).png" alt="바다 유리 선캐쳐" />
-              <p class="detile-product-brand">바다 한 조각</p>
+              <div class="detile-product-main-left">
+                <img src="images/detail/pd_img (12).png" alt="바다 유리 선캐쳐" />
+                <p class="detile-product-brand">바다 한 조각</p>
+              </div>
               <div class="detile-product-info">
                 <h1>바다 유리 선캐쳐</h1>
                 <p class="detile-product-price">
@@ -312,29 +267,22 @@
             </div>
           </div>
           <!-- 상품소개/브랜드 -->
-          <!-- 탭 버튼 -->
           <div class="detile-tab-container">
-            <div class="detile-tab-container-line">
-              <button class="detile-tab-button">상품 설명</button>
-              <button class="detile-tab-button">브랜드 소개</button>
-            </div>
-            <!-- <div class="detile-tab-container-line">
-             
-            </div> -->
+            <button class="detile-tab-button" id="description-tab">상품 설명</button>
+            <button class="detile-tab-button" id="brand-tab">브랜드 소개</button>
           </div>
 
           <!-- 상품 설명 탭 내용 -->
           <div class="detile-tab-content" id="detile-description">
-            <!-- 이미지 기본 표시 (일부만 보이게 설정) -->
             <div class="detile-image-container detile-card">
               <img src="images/detail/suncatcher.png" alt="상품설명" id="mainImage" />
             </div>
+          </div>
+
+          <!-- 브랜드 소개 탭 내용 -->
+          <div class="detile-tab-content" id="detile-brand" style="display: none">
             <div class="detile-image-brand detile-card">
-              <img src="images/detail/suncatcher-brand.png" alt="브랜드" id="detailImage"  />
-            </div>
-            <div class="detile-content">
-              <!-- 더보기 버튼 -->
-              <button id="loadMoreImageBtn" onclick="toggleMoreImage()">더보기</button>
+              <img src="images/detail/suncatcher-brand.png" alt="브랜드" id="detailImage" />
             </div>
           </div>
         </div>

@@ -35,12 +35,17 @@
 .notice_title {
   font-weight: 700;
   padding-top: 5px;
-  font-size: 23px;
-}
-.notice_text {
   font-size: 20px;
 }
-
+.notice_text {
+  font-size: 16px;
+}
+.notice_title , .notice_text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;}
 
 /* 반응형 */
 @media (max-width: 1020px) {
@@ -66,8 +71,23 @@
 @media (max-width: 630px) {
   .notice_title {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
   }
   .notice_text {
-    font-size: 16px;
+    font-size: 14px;
+}}
+@media (max-width: 470px) {
+  .notice_title {
+    font-size: 17px;
+  }
+  .notice_text {
+    font-size: 15px;
+}}
+
+@media (max-width: 400px) {
+  .notice_title {
+    font-size: 17px;
+  }
+  .notice_text {
+    font-size: 15px;
 }}
