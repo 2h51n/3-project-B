@@ -1,6 +1,8 @@
 $(document).ready(function () {
   // 실시간 검색 기능
-  $("#searchInput").on("keyup", function () {
+  const searchInputs = $("#searchInput, #searchMBInput"); // 두 개의 검색 입력 필드를 선택
+  
+  searchInputs.on("keyup", function () {
     const query = $(this).val().toLowerCase(); // 입력된 검색어 가져오기
 
     // 이전에 하이라이트된 요소들 제거
@@ -27,5 +29,12 @@ $(document).ready(function () {
     event.preventDefault(); // 기본 링크 동작 방지
     const query = $("#searchInput").val().toLowerCase(); // 입력된 검색어 가져오기
     $("#searchInput").trigger("keyup"); // 키 입력 이벤트 트리거
+  });
+
+  // 모바일 검색 버튼 클릭 시 전체 검색 실행
+  $(".searchMB a").on("click", function (event) {
+    event.preventDefault(); // 기본 링크 동작 방지
+    const query = $("#searchMBInput").val().toLowerCase(); // 입력된 검색어 가져오기
+    $("#searchMBInput").trigger("keyup"); // 키 입력 이벤트 트리거
   });
 });

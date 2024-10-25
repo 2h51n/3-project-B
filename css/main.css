@@ -3,17 +3,10 @@
 @import url(header.css);
 /* @import url(headercopy.css); */
 @import url(video.css);
-
-@import url(main_banner2.css);
-@import url(main_banner.css);
-
-@import url(main.css);
-
 @import url(material.css);
 @import url(coupon.css);
 @import url(popular_item.css);
 @import url(rookie_brand.css);
-@import url(main-banner.css);
 @import url(introduction.css);
 @import url(review.css);
 @import url(footer.css);
@@ -84,7 +77,6 @@ html {
   scroll-behavior: smooth; /* 부드러운 스크롤을 위한 CSS */
 }
 
-
 /* 초기화 */
 * {
   margin: 0;
@@ -107,7 +99,7 @@ h2.section-title {
   margin: 7% 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 

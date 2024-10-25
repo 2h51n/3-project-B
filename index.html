@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png" />
-    <link rel="manifest" href="images/favicon//site.webmanifest" />
+    <!-- <link rel="manifest" href="images/favicon//site.webmanifest" /> -->
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <!-- css적용 -->
@@ -396,7 +396,7 @@
               <div class="searchMB">
                 <a href="#">
                   <img src="images/A/icon/popup-icon/serach_bar.svg" alt="서치 아이콘" class="search_icon" />
-                  <input type="text" />
+                  <input type="text" id="searchMBInput" placeholder="모바일 검색어를 입력하세요" />
                 </a>
               </div>
               <div class="loginBt">
@@ -550,7 +550,7 @@
       </div>
     </section>
     <!-- 배너 영역 -->
-    <div class="banner searchable" >
+    <div class="banner searchable">
       <!-- 배너 슬라이드 -->
       <div class="banner-slide-area">
         <div class="swiper Banner">
@@ -936,7 +936,7 @@
       </div>
     </div>
     <!-- 인기 아이템 -->
-    <section class="popular-items-section searchable"  id="popular">
+    <section class="popular-items-section searchable" id="popular">
       <div class="container">
         <h2 class="section-title">인기 아이템</h2>
         <a href="#" class="more-link">더 보기</a>

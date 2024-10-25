@@ -85,8 +85,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  max-width: 400px;
+  width: var(--popup-width);
+  max-width: var(--popup-max-width);
   padding: var(--popup-padding);
   background-color: rgba(255, 255, 255, 0.9);
   display: none;
@@ -95,61 +95,27 @@
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-.popup-content{
-  display: flex;
-  flex-direction: column
-}
-#cartPopup > .popup-content > h2 {
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-}
 
 #cartItemsList {
-  /* background-color: white; */
-  min-width: 360px;
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#cartItemsList  ul {
-  /* display: flex; */
-  min-width: 400px;
-}
-#cartItemsList > li {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-#cartItemsList > li > button {
-  padding: 5px;
-  margin-top: 0px;
-  font-size: 10px;
-}
-#cartItemsList > ul > li {
-  min-width: 350px;
-  display: flex;
-  justify-content: space-between;
-}
+
 #cartPopup button {
   margin-top: 5%;
   padding: var(--button-padding);
-  background-color: #ffd000;
+  background-color: #fdd835;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  text-align: center;
 }
-.popclose{
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 95%;
-}
+
 #cartPopup button:hover {
-  background-color: #ad8e02;
+  background-color: #0056b3;
   transform: scale(1.05);
 }
 
@@ -159,7 +125,7 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffd000;
+  background-color: #fdd835;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -212,8 +178,8 @@
   .kakao-btn-img,
   .naver-btn-img,
   .top-btn-img {
-    width: 50px;
-    height: 50px;
+    width: 50px; /* 기존: 45px + 5px */
+    height: 50px; /* 기존: 45px + 5px */
   }
   .cart-btn {
     bottom: 70px;
@@ -231,6 +197,12 @@
     transition: opacity 0.5s ease;
     display: none;
     right: 30px;
+  }
+
+  /* 소셜 아이콘 크기 조정 */
+  .social-icon {
+    width: 35px; /* 기존: 30px + 5px */
+    height: auto; 
   }
 }
 
@@ -251,8 +223,8 @@
   .kakao-btn-img,
   .naver-btn-img,
   .top-btn-img {
-    width: 40px;
-    height: 40px;
+    width: 45px; /* 기존: 40px + 5px */
+    height: 45px; /* 기존: 40px + 5px */
   }
   .cart-btn {
     bottom: 70px;
@@ -270,6 +242,12 @@
     transition: opacity 0.5s ease;
     display: none;
     right: 30px;
+  }
+
+  /* 소셜 아이콘 크기 조정 */
+  .social-icon {
+    width: 35px; /* 기존: 30px + 5px */
+    height: auto; 
   }
 }
 
@@ -297,11 +275,17 @@
   .kakao-btn-img,
   .naver-btn-img,
   .top-btn-img {
-    width: 40px;
-    height: 40px;
+    width: 45px; /* 기존: 40px + 5px */
+    height: 45px; /* 기존: 40px + 5px */
   }
   .top-btn {
     display: none !important; /* 중요한 경우 강제로 숨김 처리 */
+  }
+
+  /* 소셜 아이콘 크기 조정 */
+  .social-icon {
+    width: 35px; /* 기존: 30px + 5px */
+    height: auto; 
   }
 }
 
@@ -322,7 +306,13 @@
   .kakao-btn-img,
   .naver-btn-img,
   .top-btn-img {
-    width: 40px;
-    height: 40px;
+    width: 45px; /* 기존: 40px + 5px */
+    height: 45px; /* 기존: 40px + 5px */
+  }
+
+  /* 소셜 아이콘 크기 조정 */
+  .social-icon {
+    width: 35px; /* 기존: 30px + 5px */
+    height: auto; 
   }
 }
