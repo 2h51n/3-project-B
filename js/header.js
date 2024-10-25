@@ -97,12 +97,19 @@ sideInputBT.addEventListener("click", function(){
   sideInput.classList.toggle("active")
 })
 
-const search830 = document.querySelector(".header-icons > .searchMB > a .search_icon")
-const searchInput = document.querySelector(".searchMB input")
+const search830 = document.querySelector(".header-icons > .searchMB > a .search_icon");
+const searchInput = document.querySelector(".searchMB input");
+const loginBThidden = document.querySelector(".header-right .loginBt");
+const closeInput = document.querySelector(".inputClose");
 
-search830.addEventListener("click", function(){
-  searchInput.classList.toggle("active")
-})
+
+search830.addEventListener("click", function () {
+  searchInput.classList.toggle("active");
+  loginBThidden.classList.toggle("hidden");
+  headLogo.classList.toggle("hidden");
+  // search830.style.display = "none";
+  // closeInput.style.display = "block";
+});
 
 
 // 사이드 메뉴 내부 클릭 시 이벤트 버블링 방지
