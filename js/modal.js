@@ -29,7 +29,7 @@ $(document).ready(function () {
   // 타이머 함수
   function startTimer() {
     var timerInterval = setInterval(function () {
-      $timerDisplay.text(`${timeLeft}초 남았습니다.`); // 타이머 표시
+      $timerDisplay.text(`자동 닫힘 ${timeLeft}초 남았습니다.`); // 타이머 표시
 
       // 시간이 다 되었을 때
       if (timeLeft <= 0) {

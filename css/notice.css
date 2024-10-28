@@ -17,18 +17,17 @@
   width: 100%;
   display: flex;
   padding-bottom: 30px;
+  cursor: pointer;
 }
-.notice-swiper-slide > a {
-  text-decoration: none;
-  color: #000;
-}
-.notice-swiper-slide > a > p {
+.notice-swiper-slide > p {
   padding-left: 10px;
   text-align: center;
   margin: 0 auto;
   line-height: 30px;
+  color: #000;
 }
-.notice-swiper-slide > a > img {
+
+.notice-swiper-slide > img {
   width: 100%;
 }
 
