@@ -110,7 +110,7 @@
 /* 장바구니 아이콘 부분 */
 .add-to-cart {
   position: absolute;
-  bottom: 40px; /* 필요에 따라 조정 */
+  bottom: 25%; /* 필요에 따라 조정 */
   right: 15px; /* 필요에 따라 조정 */
   z-index: 10; /* 이미지 위에 표시되도록 */
 }
@@ -139,11 +139,12 @@
 
 .sale-scratch{
   position: absolute;
-  width: 90%;
+  width: 70%;
   max-width: 80px;
   min-width: 60px;
-  bottom: 10%;
-  right: 20%;
+  bottom: 12%;
+  right: 5%;
+
 }
 
 .sale-item{
@@ -167,6 +168,10 @@
   .product-image {
     height: 250px; /* 이미지 높이 조정 */
   }
+  .add-to-cart {
+    bottom: 25%; /* 필요에 따라 조정 */
+    right: 15px; /* 필요에 따라 조정 */
+  }
 }
 
 /* 768px 이하 */
@@ -175,7 +180,6 @@
     grid-template-columns: repeat(2, 1fr); /* 768px 이하에서는 2열 */
     padding: 10px;
   }
-
   .product-image {
     height: 296px;
   }
@@ -213,16 +217,22 @@
   .product-item:nth-child(n + 5) {
     display: none; /* 5번 상품부터 숨김 */
   }
+  .add-to-cart {
+    bottom: 130px; /* 필요에 따라 조정 */
+    right: 15px; /* 필요에 따라 조정 */
+  }
 }
-
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 2fr; 
+    padding: 10px;
+  }
+}
 /* 480px 이하 */
 @media (max-width: 490px) {
   .product-grid {
-    grid-template-columns: 1fr; 
-    padding: 10px;
+    grid-template-columns: fr; 
   }
-
-
   .section-title {
     font-size: 20px; /* 섹션 타이틀 크기 조정 */
   }
