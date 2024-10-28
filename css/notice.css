@@ -19,8 +19,10 @@
   padding-bottom: 30px;
   cursor: pointer;
 }
-.notice-txt  > p {
-  display: block;
+.notice-txtall> img{
+  width: 100%;
+}
+.notice-txtall  > p {
   padding-left: 10px;
   text-align: center;
   margin: 0 auto;
@@ -28,18 +30,6 @@
   color: #000;
 }
 
-.notice-swiper-slide  img {
-  width: 100%;
-}
-
-.notice_title {
-  font-weight: 700;
-  padding-top: 5px;
-  font-size: 20px;
-}
-.notice_text {
-  font-size: 16px;
-}
 .notice_title , .notice_text {
   overflow: hidden;
   display: -webkit-box;
