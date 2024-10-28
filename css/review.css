@@ -82,8 +82,7 @@
   color: #333;
   text-shadow: 0 0 6px #ccc ;
   position: absolute;
-  bottom: 30%;
-  left: 12%;
+  left: 7%;
 }
 
 .insta-link img{
@@ -91,12 +90,8 @@
   height: 20px;
 }
 
-@media (max-width: 768px) {
-  .insta-link{
-    bottom: 28%;
-    left: 8%;
-  }
-}
+
+
 @media (max-width: 573px) {
   .insta-link span{
     font-size: 13px;
@@ -120,7 +115,6 @@
     left: 0;
     justify-content: center;
   }
-
 
 }
 
