@@ -182,7 +182,7 @@ $(document).ready(function () {
     left: "50%",
     transform: "translateX(-50%)",
     backgroundColor: "#fdd835",
-    color: "white",
+    color: "#000",
     padding: "10px 20px",
     borderRadius: "5px",
     zIndex: 1000,

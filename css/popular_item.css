@@ -139,11 +139,11 @@
 
 .sale-scratch{
   position: absolute;
-  width: 100%;
+  width: 90%;
   max-width: 80px;
   min-width: 60px;
-  top: 2%;
-  right: 2%;
+  bottom: 10%;
+  right: 20%;
 }
 
 .sale-item{
