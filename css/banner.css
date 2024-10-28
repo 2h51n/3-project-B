@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* 구독배너 */
+.sub-banner-section{
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px  0px  20px;
+    cursor: pointer;
+  }
+
+
+.sub-banner-container img{
+    width: 100%;
+}
+.sub-banner-400{
+    display: none;
+}
+@media (max-width: 760px) {
+    .sub-banner-400{
+        display: block;
+    }
+    .sub-banner-1920{
+        display: none;
+    }
+}
+
+/* 이벤트 배너 */
+.event-banner-section{
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 20px  0px  20px;
+    cursor: pointer;
+}
+.event-container img{
+    width: 100%;
+}
+.ebanner-500{
+    display: none;
+}
+@media (max-width: 700px) {
+    .ebanner-500{
+        display: block;
+    }
+    .ebanner-1920{
+        display: none;
+    }
+}
+
+/* 소재배너 */
+.banner {
+    display: block;
+    width: 100%;
+    margin-top: 70px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .banner-slide-area {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  
+  .swiper-Banner .swiper-slide {
+    opacity: 0; /* 기본 오파시티 값 */
+    transition: all 1.8s; /* 오파시티 전환 효과 */
+  }
+  
+  .swiper-Banner .swiper-slide-active {
+    opacity: 1; /* 활성 슬라이드에만 완전한 오파시티 적용 */
+  }
+  
+  .banne-slide > a {
+    display: block;
+    width: 100%;
+    /* background-color: ; */
+  }
+  .banne-slide img {
+    width: 100%;
+    /* height: 500px; */
+    /* object-fit: contain; */
+  }
+  .b768px {
+    display: none;
+  }
+  
+  .b360px {
+    display: none;
+  }
+  
+  @media (max-width: 700px) {
+    .b1920px {
+      display: none;
+    }
+    .b768px {
+      display: block;
+    }
+    .slide-area {
+      max-width: 450px;
+    }
+    .b360px {
+      display: none;
+    }
+  }
+  

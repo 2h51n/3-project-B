@@ -16,20 +16,22 @@
 }
 
 .more-link {
-  display: flex;
-  justify-content: right;
-  margin: 30px;
-  font-weight: bold;
-  text-align: right;
+  width: 70px;
+  padding: 10px;
+  /* font-weight: bold; */
+  text-align: center;
   display: block;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 20px;
   color: #000;
   text-decoration: none;
+  background-color: #fdd835;
+  border-radius: 50px;
+  margin-left: auto;
 }
 
 .more-link:hover {
-  text-decoration: underline;
+  background-color: #ffd104;
 }
 
 .title-section .more-link {
@@ -47,10 +49,12 @@
 }
 
 .brand-item {
-  padding-left: 3%;
+  padding-left: 20px;
   flex: 1 1 calc(33.333% - 20px); /* 기본적으로 3개의 아이템을 표시 */
 }
-
+.brand-item:first-child{
+  padding-left: 0px;
+}
 /* 메인 이미지 스타일 */
 .main-image {
   position: relative;
@@ -153,11 +157,22 @@
   .brand-item:nth-child(n + 3) {
     display: none;
   }
+  .more-link {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 0px;
+
+  }
+  .brand-item{
+    padding: 10px;
+  }
 }
 /* 480px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 480px) {
   .main-image {
-    height: 300px; 
+    height: 300px;
   }
   .brand-item {
     flex: 1 1 calc(100% - 20px); /* 1개의 아이템 표시 */
@@ -176,6 +191,6 @@
 /* 360px 이하에서 메인 이미지 높이 조정 */
 @media (max-width: 360px) {
   .main-image {
-    height: 280px; 
+    height: 280px;
   }
 }

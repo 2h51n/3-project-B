@@ -47,7 +47,7 @@
     <script src="js/review.js"></script>
     <script src="js/notice.js"></script>
     <script src="js/popular_item.js"></script>
-    <script src="js/banner.js"></script>
+    <script src="js/material_banner.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/fix-btn.js"></script>
     <script src="js/detail.js"></script>
@@ -474,6 +474,7 @@
         </div>
       </div>
     </section>
+
     <!-- 쿠폰 알림 메시지 -->
     <div id="couponAlert" class="coupon-alert" style="display: none">
       쿠폰이 지급 예정입니다. <br />
@@ -490,11 +491,11 @@
         </div>
       </div> -->
     <!-- 메인 영역 시작 -->
-    <!-- 루키 브랜드 -->
+    <!-- 신규 브랜드 -->
     <section class="rookie-brands searchable" id="brands">
       <div class="rookie_container">
-        <h2 class="section-title">지금 주목받는 루키 브랜드</h2>
-        <a href="#" class="more-link">더 보기</a>
+        <h2 class="section-title">떠오르는 신규 브랜드</h2>
+        <a href="#" class="more-link">더 보기 </a>
         <div class="brand-grid">
           <div class="swiper-wrapper">
             <!-- 브랜드 아이템 1: 바다 한 조각 -->
@@ -549,6 +550,13 @@
         </div>
       </div>
     </section>
+    <!-- 이벤트배너 -->
+    <section class="event-banner-section">
+      <div class="event-container">
+        <img src="images/B/e.banner/1920_e.banner.png" alt="1920_이벤트배너" class="ebanner-1920" />
+        <img src="images/B/e.banner/500_e.banner.png" alt="500_이벤트배너" class="ebanner-500" />
+      </div>
+    </section>
     <!-- 배너 영역 -->
     <div class="banner searchable">
       <!-- 배너 슬라이드 -->
@@ -556,34 +564,24 @@
         <div class="swiper Banner">
           <div class="swiper-wrapper">
             <div class="swiper-slide banne-slide">
-              <a href="#">
-                <img src="images/B/main_banner/1920_banner01-2.png" alt="배너1_1920" class="b1920px" />
-                <img src="images/B/banner/768_banner01.png" alt="배너1_768" class="b768px" />
-              </a>
+              <img src="images/B/main_banner/1920_banner01-2.png" alt="배너1_1920" class="b1920px" />
+              <img src="images/B/banner/768_banner01.png" alt="배너1_768" class="b768px" />
             </div>
             <div class="swiper-slide banne-slide">
-              <a href="#">
-                <img src="images/B/main_banner/1920_banner02-2.png" alt="배너1_1920" class="b1920px" />
-                <img src="images/B/banner/768_banner02.png" alt="배너1_1920" class="b768px" />
-              </a>
+              <img src="images/B/main_banner/1920_banner02-2.png" alt="배너1_1920" class="b1920px" />
+              <img src="images/B/banner/768_banner02.png" alt="배너1_1920" class="b768px" />
             </div>
             <div class="swiper-slide banne-slide">
-              <a href="#">
-                <img src="images/B/main_banner/1920_banner03-2.png" alt="배너1_1920" class="b1920px" />
-                <img src="images/B/banner/768_banner03.png" alt="배너1_1920" class="b768px" />
-              </a>
+              <img src="images/B/main_banner/1920_banner03-2.png" alt="배너1_1920" class="b1920px" />
+              <img src="images/B/banner/768_banner03.png" alt="배너1_1920" class="b768px" />
             </div>
             <div class="swiper-slide banne-slide">
-              <a href="#">
-                <img src="images/B/main_banner/1920_banner04-2.png" alt="배너1_1920" class="b1920px" />
-                <img src="images/b/banner/768_banner04.png" alt="배너1_1920" class="b768px" />
-              </a>
+              <img src="images/B/main_banner/1920_banner04-2.png" alt="배너1_1920" class="b1920px" />
+              <img src="images/b/banner/768_banner04.png" alt="배너1_1920" class="b768px" />
             </div>
             <div class="swiper-slide banne-slide">
-              <a href="#">
-                <img src="images/B/main_banner/1920_banner05-2.png" alt="배너1_1920" class="b1920px" />
-                <img src="images/b/banner/768_banner05.png" alt="배너1_1920" class="b768px" />
-              </a>
+              <img src="images/B/main_banner/1920_banner05-2.png" alt="배너1_1920" class="b1920px" />
+              <img src="images/b/banner/768_banner05.png" alt="배너1_1920" class="b768px" />
             </div>
           </div>
         </div>
@@ -935,6 +933,7 @@
         <button id="showMoreButton">더 보기</button>
       </div>
     </div>
+
     <!-- 인기 아이템 -->
     <section class="popular-items-section searchable" id="popular">
       <div class="container">
@@ -1074,6 +1073,14 @@
         <!-- 클로즈 버튼 추가 -->
       </div>
     </div>
+    <!-- 구독배너 -->
+    <section class="sub-banner-section">
+      <div class="sub-banner-container">
+        <img src="images/B/e.banner/1920_sub.banner.png" alt="1920 구독배너" class="sub-banner-1920" />
+        <img src="images/B/e.banner/400_sub.banner.png" alt="400 구독배너" class="sub-banner-400" />
+      </div>
+    </section>
+
     <!-- 리뷰 영역 -->
     <section class="review-section searchable" id="review">
       <div class="review-container">
@@ -1208,65 +1215,49 @@
           <div class="swiper-wrapper">
             <!-- notice1 -->
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/1920_notice1.png" alt="구독" />
-                <p class="notice_title">정키펑키 구독 이벤트</p>
-                <p class="notice_text">구독시 첫 구매 20% 할인쿠폰 지급</p>
-              </a>
+              <img src="images/B/e.banner/1920_notice1.png" alt="구독" />
+              <p class="notice_title">정키펑키 구독 이벤트</p>
+              <p class="notice_text">구독시 첫 구매 20% 할인쿠폰 지급</p>
             </div>
             <!-- notice2 -->
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/1920_notice2.png" alt="구독" />
-                <p class="notice_title">새로운 소식 & 자주 묻는 질문</p>
-                <p class="notice_text">정키펑키 소식은 이곳에서 확인해요~</p>
-              </a>
+              <img src="images/B/e.banner/1920_notice2.png" alt="구독" />
+              <p class="notice_title">새로운 소식 & 자주 묻는 질문</p>
+              <p class="notice_text">정키펑키 소식은 이곳에서 확인해요~</p>
             </div>
             <!-- notice3 -->
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/1920_notice3.png" alt="구독" />
-                <p class="notice_title">첫 리뷰에 포인트 두배!</p>
-                <p class="notice_text">텍스트리뷰 600P, 포토리뷰 1000P 지급</p>
-              </a>
+              <img src="images/B/e.banner/1920_notice3.png" alt="구독" />
+              <p class="notice_title">첫 리뷰에 포인트 두배!</p>
+              <p class="notice_text">텍스트리뷰 600P, 포토리뷰 1000P 지급</p>
             </div>
             <!-- notice4 -->
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/notice4.png" alt="구독" />
-                <p class="notice_title">나만의 소소한 재활용품</p>
-                <p class="notice_text">재활용으로 소품만들어 보기  </p>
-              </a>
+              <img src="images/B/e.banner/notice4.png" alt="구독" />
+              <p class="notice_title">나만의 소소한 재활용품</p>
+              <p class="notice_text">재활용으로 소품만들어 보기</p>
             </div>
             <!-- notice5 -->
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/notice5.png" alt="구독" />
-                <p class="notice_title">업사이클 프리마켓 오픈</p>
-                <p class="notice_text">2024.11.07~11.30 진행 예정</p>
-              </a>
+              <img src="images/B/e.banner/notice5.png" alt="구독" />
+              <p class="notice_title">업사이클 프리마켓 오픈</p>
+              <p class="notice_text">2024.11.07~11.30 진행 예정</p>
             </div>
             <!-- notice6 -->
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/notice6.png" alt="구독" />
-                <p class="notice_title">재활용의 가치을 입히다 </p>
-                <p class="notice_text">유용하게 새용한 물건의 새로운 삶</p>
-              </a>
+              <img src="images/B/e.banner/notice6.png" alt="구독" />
+              <p class="notice_title">재활용의 가치을 입히다</p>
+              <p class="notice_text">유용하게 새용한 물건의 새로운 삶</p>
             </div>
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/notice7.png" alt="구독" />
-                <p class="notice_title">신규브랜드 상품 보러가기</p>
-                <p class="notice_text">정키펑키에 새로운 장인들이 왔어요~!</p>
-              </a>
+              <img src="images/B/e.banner/notice7.png" alt="구독" />
+              <p class="notice_title">신규브랜드 상품 보러가기</p>
+              <p class="notice_text">정키펑키에 새로운 장인들이 왔어요~!</p>
             </div>
             <div class="swiper-slide notice-swiper-slide">
-              <a href="#">
-                <img src="images/B/e.banner/notice8.png" alt="구독" />
-                <p class="notice_title">이것도?업사이클링!?</p>
-                <p class="notice_text">말하지 않으면 새상품 같은 업사이클링</p>
-              </a>
+              <img src="images/B/e.banner/notice8.png" alt="구독" />
+              <p class="notice_title">이것도?업사이클링!?</p>
+              <p class="notice_text">말하지 않으면 새상품 같은 업사이클링</p>
             </div>
             <!-- 슬라이드 끝-->
           </div>
