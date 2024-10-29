@@ -32,7 +32,7 @@
 .close-wrap {
   display: flex;
   justify-content: space-between; /* 공간 분배 */
-  align-items: center; /* 수직 정렬 */
+  align-items: left; /* 수직 정렬 */
   margin-top: 15px; /* 여백 설정 */
 }
 

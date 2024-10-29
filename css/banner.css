@@ -80,12 +80,11 @@
   .banne-slide > a {
     display: block;
     width: 100%;
-    /* background-color: ; */
+ 
   }
   .banne-slide img {
     width: 100%;
-    /* height: 500px; */
-    /* object-fit: contain; */
+
   }
   .b768px {
     display: none;
