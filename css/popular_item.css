@@ -106,11 +106,18 @@
 .product-item {
   position: relative; /* 아이콘을 이미지 위에 위치시키기 위해 필요 */
 }
+/* .product-price{
+  position: relative;
+}
+.sale-item{
+  position: absolute;
+  top: -28%;
+} */
 
 /* 장바구니 아이콘 부분 */
 .add-to-cart {
   position: absolute;
-  bottom: 25%; /* 필요에 따라 조정 */
+  bottom: 25%; 
   right: 15px; /* 필요에 따라 조정 */
   z-index: 10; /* 이미지 위에 표시되도록 */
 }
@@ -155,6 +162,11 @@
   text-decoration-thickness: 1px; /* 취소선 두께 */
   text-decoration-color: rgb(65, 65, 65); /* 취소선 색상 */
   text-underline-offset: 8px; /* 선과 텍스트 간격 */
+}
+
+.img-container{
+  display: block;
+  position: absolute;
 }
 
 /* 반응형 디자인 */
