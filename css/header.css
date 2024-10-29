@@ -239,6 +239,10 @@
   width: 35px;
   margin: 0 auto;
 }
+.loginBt_my a img {
+  width: 35px;
+  margin: 0 auto;
+}
 
 .cartBt a {
   width: auto;
@@ -514,6 +518,12 @@
   gap: 9%;
   /* background-color: lightpink; */
 }
+.side-top-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  justify-items: center;
+  gap: 8px;
+}
 
 .side-top-icons {
   /* display: flex; */
@@ -758,6 +768,11 @@
     justify-items: center;
     gap: 9%;
   }
+  .side-top-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    justify-items: center;
+  }
 
   .sidemenu-area hr {
     margin-top: 23%;
@@ -794,4 +809,12 @@
     font-weight: bold;
     margin: 9%;
   }
+
+  /* .searchMB input.active {
+    visibility: visible;
+    width: 387px;
+  } */
+  /* #category-icon{
+    display: none;
+  } */
 }
