@@ -68,7 +68,7 @@
 }
 
 .top-btn {
-  bottom: 220px;
+  bottom: 290px; /* 로그인 버튼과 위치를 맞바꿈 */
   opacity: 0;
   transition: opacity 0.5s ease;
   display: none;
@@ -79,7 +79,6 @@
 .modal-open {
   display: block;
 }
-
 /* 팝업 공통 스타일 */
 #cartPopup {
   position: fixed;
@@ -93,45 +92,57 @@
   display: none;
   z-index: 99;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-.popup-content{
+
+.popup-content {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  position: relative; /* X 버튼을 위한 상대적 위치 지정 */
 }
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000; /* 아이콘 색상 */
+}
+
 #cartPopup > .popup-content > h2 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
 #cartItemsList {
-  /* background-color: white; */
   min-width: 360px;
   padding: 20px;
   border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
-#cartItemsList  ul {
-  /* display: flex; */
-  min-width: 400px;
-}
+
 #cartItemsList > li {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 5px;
 }
+
 #cartItemsList > li > button {
   padding: 5px;
-  margin-top: 0px;
-  font-size: 10px;
+  margin-top: 5px;
+  font-size: 12px;
 }
+
 #cartItemsList > ul > li {
-  min-width: 350px;
+  min-width: 340px;
   display: flex;
   justify-content: space-between;
 }
+
 #cartPopup button {
   margin-top: 5%;
   padding: var(--button-padding);
@@ -143,12 +154,14 @@
   transition: background-color 0.3s, transform 0.2s;
   text-align: center;
 }
-.popclose{
+
+.popclose {
   text-align: center;
   margin: 0;
   padding: 0;
   width: 95%;
 }
+
 #cartPopup button:hover {
   background-color: #ad8e02;
   transform: scale(1.05);
@@ -189,10 +202,11 @@
 .login-btn {
   position: fixed;
   right: 30px;
-  bottom: 290px; /* 탑 버튼 바로 위에 위치 */
-  z-index: 10;
+  bottom: 220px; /* '탑 버튼' 바로 아래 위치 */
+  z-index: 1000;
 }
 
+/* 고정 버튼 이미지 스타일 */
 .fixed-buttons a img {
   width: 50px; /* 다른 버튼과 동일한 크기로 설정 */
   height: 50px;
@@ -221,7 +235,7 @@
 .login-btn {
   position: fixed;
   right: 30px;
-  bottom: 290px;
+  bottom: 220px; /* '탑 버튼' 아래에 위치 */
   z-index: 10;
   animation: bounce 2s infinite; /* bounce 애니메이션을 2초 동안 무한 반복 */
 }
@@ -268,18 +282,21 @@
     right: 30px;
   }
 
+  .social-icons {
+    left: -110px; /* 왼쪽으로 정렬 조정 (값은 필요에 따라 조정) */
+  }
+
   .top-btn {
-    bottom: 190px;
+    bottom: 260px; /* 로그인 버튼과 위치 변경 */
     opacity: 0;
     transition: opacity 0.5s ease;
     display: none;
     right: 30px;
   }
   .login-btn {
-    bottom: 240px; /* '탑 버튼' 바로 위에 위치 */
+    bottom: 190px; /* '탑 버튼' 아래에 위치 */
     right: 25px; /* 다른 버튼과 동일하게 설정 */
   }
-  
 }
 
 /* 768px 이하 */
@@ -299,7 +316,7 @@
   .kakao-btn-img,
   .naver-btn-img,
   .top-btn-img,
-  .fixed-buttons a img{
+  .fixed-buttons a img {
     width: 40px;
     height: 40px;
   }
@@ -313,79 +330,20 @@
     right: 30px;
   }
 
+  .social-icons {
+    left: -90px; /* 왼쪽으로 정렬 조정 (값은 필요에 따라 조정) */
+
+  }
   .top-btn {
-    bottom: 170px;
+    bottom: 220px; /* 로그인 버튼과 위치 변경 */
     opacity: 0;
     transition: opacity 0.5s ease;
     display: none;
     right: 30px;
   }
   .login-btn {
-    bottom: 210px; /* '탑 버튼' 바로 위에 위치 */
+    bottom: 160px; /* '탑 버튼' 아래에 위치 */
     right: 20px; /* 다른 버튼과 동일하게 설정 */
   }
-}
 
-/* 480px 이하 */
-@media (max-width: 480px) {
-  :root {
-    --popup-width: 95%;
-    --popup-max-width: 340px;
-    --popup-padding: 16px;
-    --popup-font-size: 12px;
-    --button-padding: 8px 12px;
-    --count-size: 17px;
-    --count-font-size: 13px;
-  }
-
-  #notification {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-  }
-  .fix-btn-img,
-  .fix-btn-img-hover,
-  .cs-btn-img,
-  .kakao-btn-img,
-  .naver-btn-img,
-  .top-btn-img,
-  .fixed-buttons a img{
-    width: 45px;
-    height: 45px;
-  }
-  .top-btn {
-    display: none !important; /* 중요한 경우 강제로 숨김 처리 */
-  }
-  .login-btn {
-    bottom: 165px; /* '탑 버튼' 바로 위에 위치 */
-    right: 25px; /* 다른 버튼과 동일하게 설정 */
-  }
-}
-
-/* 360px 이하 */
-@media (max-width: 360px) {
-  :root {
-    --popup-width: 98%;
-    --popup-max-width: 320px;
-    --popup-padding: 16px;
-    --popup-font-size: 12px;
-    --button-padding: 8px 12px;
-    --count-size: 20px;
-    --count-font-size: 12px;
-  }
-  .fix-btn-img,
-  .fix-btn-img-hover,
-  .cs-btn-img,
-  .kakao-btn-img,
-  .naver-btn-img,
-  .top-btn-img,
-  .fixed-buttons a img{
-    width: 40px;
-    height: 40px;
-  }
-  .login-btn {
-    bottom: 160px; /* '탑 버튼' 바로 위에 위치 */
-    right: 20px; /* 다른 버튼과 동일하게 설정 */
-  }
 }

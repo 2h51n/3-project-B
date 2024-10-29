@@ -551,7 +551,7 @@
                 <div class="overlay">
                   <h3>바다 한 조각</h3>
                   <p>해변에서 주운 유리 조각을 <br />재료로 사용한 유리공예 상품</p>
-                  <li><a href="#">자세히 보기</a></li>
+                  <li><a href="detail-page.html">자세히 보기</a></li>
                 </div>
               </div>
               <div class="sub-images">
@@ -993,7 +993,6 @@
                 <a href="#">
                   <img src="images/material images/pd_img (19).png" alt="소재별 굿즈 02" />
                   <div class="materal-textbox">
-
                     <p>ODD.TRAIN</p>
                     <p>CALENDAR 2024</p>
                     <p><span class="price_bold">56,000원</span></p>
@@ -1193,10 +1192,14 @@
     <!-- 장바구니 팝업 -->
     <div id="cartPopup" class="cart-popup" style="display: none">
       <div class="popup-content">
+        <button onclick="closeCartPopup()" class="close-button">
+          <i class="fas fa-times"></i>
+          <!-- X 아이콘 -->
+        </button>
         <h2>장바구니 내용</h2>
         <ul id="cartItemsList"></ul>
-        <button onclick="closeCartPopup()" class="popclose">닫기</button>
-        <!-- 클로즈 버튼 추가 -->
+        <button onclick="purchaseItems()" class="popclose">구매하기</button>
+        <!-- 구매 버튼 -->
       </div>
     </div>
     <!-- 구독배너 -->
