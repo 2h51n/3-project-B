@@ -40,7 +40,6 @@
   cursor: pointer; /* 포인터 커서로 변경 */
   font-size: 24px; /* 폰트 사이즈 */
   color: #aaa; /* 색상 */
-
 }
 
 .close-btn:hover {
@@ -50,8 +49,7 @@
 /* 체크박스와 텍스트를 그리드로 배치 */
 .notToday-wrap {
   display: grid;
-  grid-template-columns: auto 1fr; /* 첫 번째 열은 체크박스, 두 번째 열은 텍스트 */
-  align-items: right; /* 수직 정렬 */
+  justify-items: center;
   gap: 5px; /* 열 사이 간격 */
   margin-top: 15px; /* 상단 여백 추가 */
 }
@@ -59,15 +57,12 @@
 .notToday {
   font-size: 15px; /* 폰트 사이즈 설정 */
   color: #666; /* 텍스트 색상 설정 */
-  margin-bottom: 15PX;
-  text-align: left;
+  text-align: left; /* 왼쪽 정렬로 변경 */
 }
 
 input[type="checkbox"] {
-  margin: 0 auto; /* 체크박스 주변 여백 제거 */
-
+  display: block; /* 블록으로 설정하여 중앙 정렬 가능 */
 }
-
 
 #timer {
   font-size: 15px; /* 글자 크기 */
