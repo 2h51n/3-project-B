@@ -21,9 +21,10 @@
 .cs-btn-img,
 .kakao-btn-img,
 .naver-btn-img,
-.top-btn-img {
-  width: 60px;
-  height: 60px;
+.top-btn-img,
+.login-btn {
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -160,7 +161,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffd000;
-  color: #000;
+  color: #000 !important;
   padding: 10px 20px;
   border-radius: 5px;
   transition: opacity 0.3s, visibility 0.3s;
@@ -182,6 +183,47 @@
   align-items: center;
   font-weight: bold;
   font-size: var(--count-font-size);
+}
+
+/* 로그인 버튼 스타일 */
+.login-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 290px; /* 탑 버튼 바로 위에 위치 */
+  z-index: 10;
+}
+
+.fixed-buttons a img {
+  width: 50px; /* 다른 버튼과 동일한 크기로 설정 */
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fixed-buttons a img:hover {
+  transform: scale(1.1);
+}
+
+/* 로그인 버튼 애니메이션 */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 로그인 버튼에 애니메이션 적용 */
+.login-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 290px;
+  z-index: 10;
+  animation: bounce 2s infinite; /* bounce 애니메이션을 2초 동안 무한 반복 */
 }
 
 /* CSS 변수 */
@@ -211,9 +253,10 @@
   .cs-btn-img,
   .kakao-btn-img,
   .naver-btn-img,
-  .top-btn-img {
-    width: 50px;
-    height: 50px;
+  .top-btn-img,
+  .fixed-buttons a img {
+    width: 45px;
+    height: 45px;
   }
   .cart-btn {
     bottom: 70px;
@@ -232,6 +275,11 @@
     display: none;
     right: 30px;
   }
+  .login-btn {
+    bottom: 240px; /* '탑 버튼' 바로 위에 위치 */
+    right: 25px; /* 다른 버튼과 동일하게 설정 */
+  }
+  
 }
 
 /* 768px 이하 */
@@ -250,7 +298,8 @@
   .cs-btn-img,
   .kakao-btn-img,
   .naver-btn-img,
-  .top-btn-img {
+  .top-btn-img,
+  .fixed-buttons a img{
     width: 40px;
     height: 40px;
   }
@@ -270,6 +319,10 @@
     transition: opacity 0.5s ease;
     display: none;
     right: 30px;
+  }
+  .login-btn {
+    bottom: 210px; /* '탑 버튼' 바로 위에 위치 */
+    right: 20px; /* 다른 버튼과 동일하게 설정 */
   }
 }
 
@@ -296,12 +349,17 @@
   .cs-btn-img,
   .kakao-btn-img,
   .naver-btn-img,
-  .top-btn-img {
-    width: 40px;
-    height: 40px;
+  .top-btn-img,
+  .fixed-buttons a img{
+    width: 45px;
+    height: 45px;
   }
   .top-btn {
     display: none !important; /* 중요한 경우 강제로 숨김 처리 */
+  }
+  .login-btn {
+    bottom: 165px; /* '탑 버튼' 바로 위에 위치 */
+    right: 25px; /* 다른 버튼과 동일하게 설정 */
   }
 }
 
@@ -321,8 +379,13 @@
   .cs-btn-img,
   .kakao-btn-img,
   .naver-btn-img,
-  .top-btn-img {
+  .top-btn-img,
+  .fixed-buttons a img{
     width: 40px;
     height: 40px;
+  }
+  .login-btn {
+    bottom: 160px; /* '탑 버튼' 바로 위에 위치 */
+    right: 20px; /* 다른 버튼과 동일하게 설정 */
   }
 }

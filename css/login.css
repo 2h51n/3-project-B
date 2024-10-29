@@ -110,7 +110,7 @@
 }
 
 .close-btn:hover {
-  color:  #fee500; /* 호버 시 색상 변화 */
+  color: #fffb00; /* 호버 시 색상 변화 */
 }
 
 /* 로그인 버튼 스타일 */
@@ -299,7 +299,6 @@
   padding: 10px; /* 내부 여백 */
 }
 
-
 /* 회원가입 버튼 스타일 */
 .signup-button {
   width: 100%;
@@ -315,7 +314,6 @@
 .signup-button:hover {
   background-color: #02b150; /* 호버 시 색상 변화 */
 }
-
 
 /* 버튼 그룹 스타일 */
 .terms-submit-button {
@@ -361,7 +359,7 @@
   border-radius: 8px; /* 모서리 둥글게 */
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* 그림자 */
   z-index: 1000;
-  font-family: 'Arial', sans-serif; /* 글꼴 */
+  font-family: "Arial", sans-serif; /* 글꼴 */
   color: #333; /* 글자색 */
   text-align: center; /* 가운데 정렬 */
 }
@@ -372,7 +370,7 @@
 }
 
 .logout-button {
-  background-color: #4CAF50; /* 버튼 배경색 */
+  background-color: #4caf50; /* 버튼 배경색 */
   color: white; /* 버튼 글자색 */
   border: none; /* 테두리 없앰 */
   border-radius: 5px; /* 모서리 둥글게 */
@@ -398,17 +396,23 @@
   color: #000; /* 호버시 색상 변화 */
 }
 
-
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-
 
 /* 1024px 이상의 해상도 */
 @media screen and (min-width: 1024px) {
@@ -424,4 +428,9 @@
 
 /* 360px 이상의 해상도 */
 @media screen and (max-width: 480px) {
+  /* 모달 콘텐츠 스타일 */
+.modal-content {
+  top: 14%;
+}
+
 }
