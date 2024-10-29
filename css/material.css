@@ -5,7 +5,7 @@
   max-width: 1300px;
   /* background-color: aqua; */
   margin: 0 auto;
-  margin-top: 40px;
+  padding: 20px;
 }
 
 /* 소재 슬라이드(아이콘) 영역 */
@@ -14,8 +14,7 @@
   width: 100%;
   max-width: 1000px;
   background-color: #fff;
-  margin: 40px auto;
-  /* margin-top: 40px; */
+  margin: 20px auto;
   justify-content: space-between;
 }
 
@@ -36,10 +35,11 @@
   gap: 10px;
   color: #333;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   text-decoration: none;
   opacity: 0.53;
 }
+
 .swMaterial .swiper-slide a:hover {
   opacity: 1;
 }
@@ -51,6 +51,7 @@
 .swMaterial .swiper-slide .scale {
   scale: 1.2;
   overflow: hidden;
+  
 }
 
 /* 소재별 굿즈 영역 */
@@ -69,7 +70,7 @@
   /* background-color: darkcyan; */
   justify-content: center;
   align-items: center;
-  padding: 0 4%;
+  /* padding: 0 4%; */
 }
 .material-goods-card {
   display: block;
@@ -128,7 +129,7 @@
 }
 
 .materal-rating span {
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .materal-rating > img {
@@ -191,7 +192,7 @@
 
 .show-more {
   text-align: center;
-  margin: 1px ;
+  margin: 20px 0;
 }
 
 #showMoreButton {
@@ -205,6 +206,16 @@
   font-size: 14px;
   font-weight: 800;
 }
+
+/* 장바구니 아이콘 부분 */
+.add-to-cart1 {
+  position: absolute;
+  bottom: 42%; /* 필요에 따라 조정 */
+  right: 5%; /* 필요에 따라 조정 */
+  z-index: 10; /* 이미지 위에 표시되도록 */
+}
+
+
 
 /* 1024px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 1024px) {
@@ -229,8 +240,11 @@
     text-align: left;
   }
   .material-goods-card a > img {
-    height: 328.61px;
+    max-height: 328.61px;
   }
+
+
+
 }
 
 /* 480px 이하 화면을 위한 미디어 쿼리 */
@@ -240,7 +254,7 @@
   }
 
   .material-goods-card a > img {
-    height: 372px;
+    max-height: 350px;
   }
 
   .material-goods {
@@ -260,15 +274,11 @@
   }
 
   #showMoreButton {
-    margin:  auto;
+    margin: 0 auto;
     display: block;
     border: none;
     color: #333;
     background-color: #fdd835;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 13px;
-    font-weight: 1000;
   }
 }
 
@@ -281,7 +291,7 @@
   }
 
   .material-goods-card a > img {
-    height: 276px;
+    max-height: 250px;
   }
 
   .material-goods-card {
@@ -291,5 +301,106 @@
   .more-link_m {
     display: block;
   }
+  .add-to-cart1 {
+    bottom: 35%; /* 상대적으로 위치 조정 */
+    right: 5%; /* 오른쪽 여백 조정 */
+  }
 }
 
+/* 소재배너 */
+.banner {
+  border: 1px dashed #ccc;
+  display: block;
+  width: 100%;
+  /* height: auto; */
+  margin-top: 70px;
+  /* max-width: 1100px; */
+  /* background-color: aqua; */
+  z-index: 9999;
+}
+
+.banner-slide-area {
+  display: block;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.swiper-Banner .swiper-slide {
+  opacity: 0; /* 기본 오파시티 값 */
+  transition: all 1.8s; /* 오파시티 전환 효과 */
+}
+
+.swiper-Banner .swiper-slide-active {
+  opacity: 1; /* 활성 슬라이드에만 완전한 오파시티 적용 */
+}
+
+.banne-slide > a {
+  display: block;
+  width: 100%;
+  /* background-color: ; */
+}
+.banne-slide > a > img {
+  width: 100%;
+  /* height: 500px; */
+  /* object-fit: contain; */
+}
+.b768px {
+  display: none;
+}
+
+.b360px {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .add-to-cart1 {
+    bottom: 26%; /* 상대적으로 위치 조정 */
+    right: 4%; /* 오른쪽 여백 조정 */
+  }
+
+  .add-icon {
+    width: 35px; /* 아이콘 크기 조정 */
+    height: 35px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .b1920px {
+    display: none;
+  }
+  .b768px {
+    display: block;
+  }
+  .slide-area {
+    max-width: 450px;
+  }
+  .b360px {
+    display: none;
+  }
+
+  .add-to-cart1 {
+    bottom: 31%; /* 상대적으로 위치 조정 */
+    right: 4%; /* 오른쪽 여백 조정 */
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .add-to-cart1 {
+    bottom: 30%; /* 상대적으로 위치 조정 */
+    right: 5%; /* 오른쪽 여백 조정 */
+  }
+
+}
+
+
+@media (max-width: 360px) {
+  .add-to-cart1 {
+    bottom: 37%; /* 상대적으로 위치 조정 */
+    right: 5%; /* 오른쪽 여백 조정 */
+  }
+
+}
