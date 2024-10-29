@@ -2,7 +2,7 @@
 /* 섹션 타이틀과 더 보기 링크 */
 .popular-items-section {
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .container {
@@ -265,7 +265,10 @@
     margin-bottom: 10px;
     margin: 2% 0;
   }
-
+  .add-to-cart {
+    bottom: 120px; /* 필요에 따라 조정 */
+    right: 15px; /* 필요에 따라 조정 */
+  }
   .more-link {
     font-size: 14px;
   }
@@ -281,6 +284,11 @@
 
   .section-title {
     font-size: 18px; /* 섹션 타이틀 크기 더 작게 */
+  }
+
+  .add-to-cart {
+    bottom: 110px; /* 필요에 따라 조정 */
+    right: 15px; /* 필요에 따라 조정 */
   }
 
   .more-link {

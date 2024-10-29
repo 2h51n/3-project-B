@@ -169,7 +169,6 @@
 .searchMB {
   scale: 0.95;
   display: none;
-  
 }
 .searchMB input {
   display: block;
@@ -179,7 +178,7 @@
   width: 236px;
   width: 1px;
   transform: translate(-271px, -56px);
-  
+
   height: 45px;
   padding: 10px;
   border: none;
@@ -194,7 +193,7 @@
   visibility: visible;
   width: 238px;
 }
-.inputClose{
+.inputClose {
   display: none;
   position: absolute;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -205,7 +204,7 @@
   transition: all 0.3s;
 }
 
-.inputClose.active{
+.inputClose.active {
   display: block;
 }
 
@@ -227,7 +226,7 @@
   margin: 0 auto;
   /* margin-top: 4px; */
 }
-.header-right .loginBt.hidden{
+.header-right .loginBt.hidden {
   display: none;
 }
 
@@ -464,13 +463,13 @@
   /* background-color: beige; */
 }
 
-.side-top::after{
+.side-top::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 10%;
   width: 80%;
-  
+
   height: 1px;
   background: #333;
 }
@@ -557,7 +556,7 @@
   justify-content: space-around;
 }
 
-.side-bottom{
+.side-bottom {
   width: 100%;
   height: 70%;
   display: flex;
@@ -565,11 +564,11 @@
   align-items: center;
   /* background-color: antiquewhite; */
 }
-.side-bottom-title{
+.side-bottom-title {
   font-weight: bold;
   margin: 13%;
 }
-.side-bottom-menu{
+.side-bottom-menu {
   width: 54%;
   width: 160px;
   display: grid;
@@ -580,12 +579,12 @@
   justify-content: end;
   justify-items: center;
 }
-.side-bottom-menu li{
+.side-bottom-menu li {
   width: 100%;
   max-width: 60px;
 }
 
-.side-bottom-menu li a{
+.side-bottom-menu li a {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -593,7 +592,7 @@
   word-break: keep-all;
 }
 
-.side-bottom-menu li a img{
+.side-bottom-menu li a img {
   /* width: 60px; */
   width: 100%;
   /* height: 60px; */
@@ -601,15 +600,13 @@
   object-fit: contain;
 }
 
-.side-bottom-menu li a img:nth-child(3){
+.side-bottom-menu li a img:nth-child(3) {
   /* width: 60px; */
   /* scale: 1.6; */
 }
-.side-bottom-menu li a img:first-child{
+.side-bottom-menu li a img:first-child {
   /* scale: 0.9; */
 }
-
-
 
 .searchMB a img {
   width: 23px;
@@ -784,7 +781,7 @@
     display: block !important;
   }
 
-  .side-bottom-menu{
+  .side-bottom-menu {
     /* width: 60%; */
     /* height: 70%; */
     display: grid;
@@ -796,7 +793,7 @@
     /* flex-wrap: wrap; */
   }
 
-  .side-bottom-menu li a img{
+  .side-bottom-menu li a img {
     /* width: 60px; */
     width: 100%;
     /* height: 100%; */
@@ -805,7 +802,7 @@
     /* object-fit: cover; */
   }
 
-  .side-bottom-title{
+  .side-bottom-title {
     font-weight: bold;
     margin: 9%;
   }
