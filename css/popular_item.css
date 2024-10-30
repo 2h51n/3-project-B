@@ -21,7 +21,7 @@
   text-align: right;
   display: block;
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #333;
   text-decoration: none;
 }
@@ -34,7 +34,8 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
+
 }
 
 /* 각 상품 아이템 */
@@ -45,6 +46,7 @@
   text-align: center;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 .product-item p{
   display: flex;
@@ -184,39 +186,38 @@
     bottom: 25%; /* 필요에 따라 조정 */
     right: 15px; /* 필요에 따라 조정 */
   }
+  .product-item > .product-name {
+    font-size: 17px;
+
+  }
 }
 
 /* 768px 이하 */
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr); /* 768px 이하에서는 2열 */
-    padding: 10px;
+    padding-top: 10px;
   }
   .product-image {
     height: 296px;
   }
 
-  .product-name {
-    font-size: 16px;
-    margin: 2% 0;
+  .product-item > .product-name {
+    font-size: 19px;
+
   }
   
   .product-brand {
     font-size: 13px;
     /* font-weight: bold; */
-    margin: 2% 0;
-  }
-  
-  .product-price {
-    font-size: 17px;
-    font-weight: bold;
+
   }
   
   /* 별점 아이콘 */
   .rating-icon {
     width: 80px;
     height: 14px;
-    margin: 2% 0;
+
   }
   
   /* 리뷰 개수 */
@@ -230,27 +231,30 @@
     display: none; /* 5번 상품부터 숨김 */
   }
   .add-to-cart {
-    bottom: 130px; /* 필요에 따라 조정 */
+    bottom: 23%; /* 필요에 따라 조정 */
     right: 15px; /* 필요에 따라 조정 */
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 590px) {
+  .product-item >.product-name {
+    font-size: 16px;
+  }
+  .product-item img{
+    max-height: 210px;
+  }
+}
+/* 480px 이하 */
+@media (max-width: 485px) {
   .product-grid {
     grid-template-columns: 2fr; 
     padding: 10px;
   }
-}
-/* 480px 이하 */
-@media (max-width: 490px) {
-  .product-grid {
-    grid-template-columns: fr; 
-  }
   .section-title {
     font-size: 20px; /* 섹션 타이틀 크기 조정 */
   }
-  .product-name {
-    font-size: 13px;
-    margin: 2% 0;
+  .product-item > .product-name {
+    font-size: 19px;
+
   }
   
   .product-brand {
@@ -266,8 +270,8 @@
     margin: 2% 0;
   }
   .add-to-cart {
-    bottom: 120px; /* 필요에 따라 조정 */
-    right: 15px; /* 필요에 따라 조정 */
+    bottom: 25%;  /* 필요에 따라 조정 */
+
   }
   .more-link {
     font-size: 14px;

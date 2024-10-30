@@ -2,6 +2,7 @@
 
 .material-area {
   width: 100%;
+  height:100%;
   max-width: 1300px;
   /* background-color: aqua; */
   margin: 0 auto;
@@ -34,7 +35,7 @@
   align-items: center;
   gap: 10px;
   color: #333;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 17px;
   text-decoration: none;
   opacity: 0.53;
@@ -77,22 +78,24 @@
   width: 100%;
   /* background-color: antiquewhite; */
 }
-
+.material-icon{
+  margin-bottom: 20px;
+}
 /* 각 상품 아이템 */
 .material-goods-card {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 5px;
-  margin: 5% 0;
+  margin-top: 1% ;
   /* text-align: center; */
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.material-goods-card a > img {
+.material-goods-card > a > img {
   width: 100%;
   object-fit: cover;
-  height: 210px;
+height: 230.5px;
 }
 
 .material-goods-card a {
@@ -102,7 +105,7 @@
   /* padding: 5px; */
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 17px;
   text-align: left;
 }
 
@@ -112,7 +115,7 @@
 }
 .materal-textbox > p:first-child,
 .materal-rating > span {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .price_bold {
@@ -129,7 +132,7 @@
 }
 
 .materal-rating span {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .materal-rating > img {
@@ -192,26 +195,29 @@
 
 .show-more {
   text-align: center;
-  margin: 20px 0;
+  margin: 0 auto;
+
 }
 
 #showMoreButton {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 10px;
+  font-size: 12px;
   cursor: pointer;
   display: none;
+  border-radius: 20px;
 }
 
 .m_title {
   font-size: 14px;
-  font-weight: 800;
+  padding: 0, 0  8px 0;
+  /* font-weight: 800; */
 }
 
 /* 장바구니 아이콘 부분 */
 .add-to-cart1 {
   position: absolute;
-  bottom: 42%; /* 필요에 따라 조정 */
-  right: 5%; /* 필요에 따라 조정 */
+  bottom: 27%; /* 필요에 따라 조정 */
+  right: 2%; /* 필요에 따라 조정 */
   z-index: 10; /* 이미지 위에 표시되도록 */
 }
 
@@ -220,48 +226,76 @@
 /* 1024px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 1024px) {
   .material-goods-card {
-    flex: 1 1 calc(50% - 20px); /* 3개의 아이템 표시 */
+    grid-template-columns: repeat(3, 1fr); /* 1024px 이하에서는 3열 */
+    flex: 1 1 calc(50% - 20px); /* 2개의 아이템 표시 */
   }
-  .material-goods-card a > img {
-    height: 433px;
+  .material-goods-card a {
+    font-size: 19px;
+
+  }
+  .material-goods-card > a > img {
+    height: 300px;
+  }
+  .add-to-cart1{
+    bottom: 22%; 
   }
 }
 
-/* 880px 이하 화면을 위한 미디어 쿼리 */
-@media (max-width: 880px) {
-  .material-goods-card {
-    flex: 1 1 calc(50% - 20px); /* 2개의 아이템 표시 */
-  }
-}
 
 /* 768px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 768px) {
+  .material-goods-card {
+    flex: 1 1 calc(50% - 20px); /* 2개의 아이템 표시 */
+  }
   .materal-textbox {
     text-align: left;
   }
-  .material-goods-card a > img {
+  /* .material-goods-card a > img {
     max-height: 328.61px;
+  } */
+
+  .b1920px {
+    display: none;
+  }
+  .b768px {
+    display: block;
+  }
+  .slide-area {
+    max-width: 450px;
+  }
+  .b360px {
+    display: none;
   }
 
-
-
+}
+@media (max-width: 590px) {
+  .material-goods-card a {
+    font-size: 16px;
+  }
+  .material-goods-card > a > img {
+    height: 210px;
+  }
+  .add-to-cart1{
+    bottom: 26%; 
+  }
 }
 
 /* 480px 이하 화면을 위한 미디어 쿼리 */
-@media (max-width: 480px) {
+@media (max-width: 485px) {
   .swiper-slide img {
     width: 60%; /* 아이콘의 너비를 화면의 40%로 설정 */
   }
 
-  .material-goods-card a > img {
-    max-height: 350px;
+  .material-goods-card a {
+    font-size: 19px;
   }
-
+  .material-goods-card {
+    margin: 0 0 10px ;
+  }
   .material-goods {
     padding: 0 10%;
   }
   .materal-textbox p {
-    font-size: 14px;
     margin-bottom: 10px;
   }
 
@@ -280,6 +314,12 @@
     color: #333;
     background-color: #fdd835;
   }
+  .material-goods{
+    padding: 10px;
+  }
+  .add-to-cart1{
+    bottom: 28%; 
+  }
 }
 
 /* 360px 이하 화면을 위한 미디어 쿼리 */
@@ -290,9 +330,9 @@
     gap: 10px; /* 그리드 아이템 간의 간격 */
   }
 
-  .material-goods-card a > img {
+  /* .material-goods-card a > img {
     max-height: 250px;
-  }
+  } */
 
   .material-goods-card {
     flex: unset; /* Flex 속성 제거 */
@@ -301,106 +341,10 @@
   .more-link_m {
     display: block;
   }
-  .add-to-cart1 {
-    bottom: 35%; /* 상대적으로 위치 조정 */
-    right: 5%; /* 오른쪽 여백 조정 */
+
+}
+@media (max-width: 385px) {
+  .material-goods{
+    padding: 10px;
   }
-}
-
-/* 소재배너 */
-.banner {
-  border: 1px dashed #ccc;
-  display: block;
-  width: 100%;
-  /* height: auto; */
-  margin-top: 70px;
-  /* max-width: 1100px; */
-  /* background-color: aqua; */
-  z-index: 9999;
-}
-
-.banner-slide-area {
-  display: block;
-  width: 100%;
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-.swiper-Banner .swiper-slide {
-  opacity: 0; /* 기본 오파시티 값 */
-  transition: all 1.8s; /* 오파시티 전환 효과 */
-}
-
-.swiper-Banner .swiper-slide-active {
-  opacity: 1; /* 활성 슬라이드에만 완전한 오파시티 적용 */
-}
-
-.banne-slide > a {
-  display: block;
-  width: 100%;
-  /* background-color: ; */
-}
-.banne-slide > a > img {
-  width: 100%;
-  /* height: 500px; */
-  /* object-fit: contain; */
-}
-.b768px {
-  display: none;
-}
-
-.b360px {
-  display: none;
-}
-
-@media (max-width: 1024px) {
-  .add-to-cart1 {
-    bottom: 26%; /* 상대적으로 위치 조정 */
-    right: 4%; /* 오른쪽 여백 조정 */
-  }
-
-  .add-icon {
-    width: 35px; /* 아이콘 크기 조정 */
-    height: 35px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .b1920px {
-    display: none;
-  }
-  .b768px {
-    display: block;
-  }
-  .slide-area {
-    max-width: 450px;
-  }
-  .b360px {
-    display: none;
-  }
-
-  .add-to-cart1 {
-    bottom: 31%; /* 상대적으로 위치 조정 */
-    right: 4%; /* 오른쪽 여백 조정 */
-  }
-
-}
-
-
-@media (max-width: 480px) {
-  .add-to-cart1 {
-    bottom: 30%; /* 상대적으로 위치 조정 */
-    right: 5%; /* 오른쪽 여백 조정 */
-  }
-
-}
-
-
-@media (max-width: 360px) {
-  .add-to-cart1 {
-    bottom: 37%; /* 상대적으로 위치 조정 */
-    right: 5%; /* 오른쪽 여백 조정 */
-  }
-
 }
