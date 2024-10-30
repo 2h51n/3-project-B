@@ -15,14 +15,14 @@
 .sub-banner-container img{
     width: 100%;
 }
-.sub-banner-400{
+#sub-banner-400{
     display: none;
 }
 @media (max-width: 760px) {
-    .sub-banner-400{
+    #sub-banner-400{
         display: block;
     }
-    .sub-banner-1920{
+    #sub-banner-1920{
         display: none;
     }
 }
@@ -40,14 +40,14 @@
 .event-container img{
     width: 100%;
 }
-.ebanner-500{
+#ebanner-500{
     display: none;
 }
 @media (max-width: 700px) {
-    .ebanner-500{
+    #ebanner-500{
         display: block;
     }
-    .ebanner-1920{
+    #ebanner-1920{
         display: none;
     }
 }
