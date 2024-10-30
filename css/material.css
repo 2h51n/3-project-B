@@ -2,6 +2,7 @@
 
 .material-area {
   width: 100%;
+  height:100%;
   max-width: 1300px;
   /* background-color: aqua; */
   margin: 0 auto;
@@ -77,22 +78,24 @@
   width: 100%;
   /* background-color: antiquewhite; */
 }
-
+.material-icon{
+  margin-bottom: 20px;
+}
 /* 각 상품 아이템 */
 .material-goods-card {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 5px;
-  margin: 5% 0;
+  margin-top: 1% ;
   /* text-align: center; */
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.material-goods-card a > img {
+.material-goods-card > a > img {
   width: 100%;
   object-fit: cover;
-  height: 210px;
+height: 230.5px;
 }
 
 .material-goods-card a {
@@ -226,19 +229,18 @@
     grid-template-columns: repeat(3, 1fr); /* 1024px 이하에서는 3열 */
     flex: 1 1 calc(50% - 20px); /* 2개의 아이템 표시 */
   }
-  .add-to-cart1{
-    bottom: 27%; 
-  }
   .material-goods-card a {
     font-size: 19px;
-  }
-}
-@media (max-width: 990px) {
 
+  }
+  .material-goods-card > a > img {
+    height: 300px;
+  }
   .add-to-cart1{
-    bottom: 28%; 
+    bottom: 22%; 
   }
 }
+
 
 /* 768px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 768px) {
@@ -251,9 +253,7 @@
   /* .material-goods-card a > img {
     max-height: 328.61px;
   } */
-  .add-to-cart1{
-    bottom: 27%; 
-  }
+
   .b1920px {
     display: none;
   }
@@ -268,9 +268,15 @@
   }
 
 }
-@media (max-width: 585px) {
+@media (max-width: 590px) {
   .material-goods-card a {
     font-size: 16px;
+  }
+  .material-goods-card > a > img {
+    height: 210px;
+  }
+  .add-to-cart1{
+    bottom: 26%; 
   }
 }
 
@@ -310,6 +316,9 @@
   }
   .material-goods{
     padding: 10px;
+  }
+  .add-to-cart1{
+    bottom: 28%; 
   }
 }
 
