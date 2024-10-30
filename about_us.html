@@ -39,15 +39,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- js -->
-    <script src="js/modal.js"></script>
-    <script src="js/header.js"></script>
+
     <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/h.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/fix-btn.js"></script>
     <script src="js/login.js"></script>
     <!-- css -->
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/header_aboutus.css" />
+    <!-- <link rel="stylesheet" href="css/head.css" /> -->
     <link rel="stylesheet" href="css/aboutus.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <title>B안 소개 'JUNKY FUNKY!'</title>
@@ -55,7 +56,7 @@
       html {
         scroll-behavior: smooth;
       }
-      
+
 
     </style>
   </head>
@@ -65,7 +66,7 @@
         <div class="container">
           <div class="header-top">
             <ul class="head-navi">
-              <div class="navi-cate">
+              <!-- <div class="navi-cate">
                 <div class="cate-right">
                   <ul class="depth-top">
                     <li>
@@ -100,7 +101,7 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
               <li>
                 <button class="cate-close">X</button>
                 <a href="#" id="category-icon">
@@ -125,9 +126,10 @@
                           </div>
                           <div class="loginBt_my">
                             <a href="#">
-                              <img src="images/A/icon/popup-icon/user_icon_my.svg" alt="유저 아이콘" />
+                              <img src="images/A/icon/popup-icon/user_icon_my.png" alt="유저 아이콘" />
                             </a>
                           </div>
+  
                           <!-- <div class="cartBt">
                             <a href="#">
                               <img src="images/A/icon/popup-icon/cart-icon.svg" alt="카트 아이콘" />
@@ -145,7 +147,7 @@
                         <li><a href="notice.html">공지사항</a></li>
                       </ul>
                     </div>
-                    <div class="side-bottom">
+                    <!-- <div class="side-bottom">
                       <h3 class="side-bottom-title">카테고리</h3>
                       <ul class="side-bottom-menu">
                         <li>
@@ -179,48 +181,12 @@
                           </a>
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </a>
               </li>
               <li>
-                <a href="index.html#material" class="category-title">카테고리</a>
-                <!-- <div class="navi-cate">
-                  <div class="cate-right">
-                    <ul class="depth-top">
-                      <li>
-                        <a href="#">
-                          <img src="images/A/icon/submenu-icon/plastic.png" alt="소재_플라스틱 아이콘" />
-                          <span>플라스틱</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="images/A/icon/submenu-icon/clothes.png" alt="소재_천 아이콘" />
-                          <span>천</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="images/A/icon/submenu-icon/wood.png" alt="소재_목재 아이콘" />
-                          <span>목재</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="images/A/icon/submenu-icon/glass.png" alt="소재_유리 아이콘" />
-                          <span>유리</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="images/A/icon/submenu-icon/etc.png" alt="소재_기타 아이콘" />
-                          <span>기타</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
+                <a href="index.html#material">카테고리</a>
               </li>
               <li><a href="index.html#event">이벤트</a></li>
               <li><a href="index.html#popular">인기</a></li>
@@ -254,13 +220,12 @@
                     <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
                   </a>
                 </div>
-                <div class="loginBt_my" style="display: none">
-                  <!-- 초기에는 감춰져야 함 -->
+                <div class="loginBt_my" style="display: none;"> <!-- 초기에는 감춰져야 함 -->
                   <a href="#">
                     <img src="images/A/icon/popup-icon/user_icon_my.svg" alt="유저 아이콘" />
                   </a>
                 </div>
-
+  
                 <!-- <div class="cartBt">
                   <a href="#">
                     <img src="images/A/icon/popup-icon/cart-icon.svg" alt="카트 아이콘" />
@@ -271,7 +236,7 @@
           </div>
           <div class="header-bottom">
             <ul class="navi-bottom">
-              <li><a href="index.html#material" class="category-title">카테고리</a></li>
+              <li><a href="index.html#material">카테고리</a></li>
               <li><a href="index.html#event">이벤트</a></li>
               <li><a href="index.html#popular">인기</a></li>
               <!-- <li><a href="#">구독</a></li> -->
