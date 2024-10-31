@@ -89,17 +89,18 @@
 }
 /* 별점 아이콘 */
 .popular-rating{
-  padding-left: 5px;
+  width: 100%;
   text-align: left;
   margin-bottom: 10px;
 }
 .rating-icon {
   width: 48%;
 }
-
+.popular-rating img{
+  max-width: 100px;
+}
 .popular-rating > span{
   font-size: 15px;
-  /* font-weight: 500; */
   color: #333;
 }
 
@@ -227,7 +228,6 @@
   .rating-icon {
     width: 80px;
     height: 14px;
-
   }
   
   /* 리뷰 개수 */

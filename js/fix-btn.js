@@ -141,19 +141,14 @@ function purchaseItems() {
 
 // Top 버튼의 표시 여부를 토글하는 함수
 function toggleTopButtonVisibility(topBtn) {
-  if (window.innerWidth > 480) {
-    // 해상도 체크: 480px 이상일 때만 적용
-    if (window.scrollY > 100) {
-      topBtn.style.display = "block"; // Top 버튼 표시
-      topBtn.style.opacity = 1; // 완전 불투명
-    } else {
-      topBtn.style.opacity = 0; // 완전 투명
-      setTimeout(() => {
-        topBtn.style.display = "none"; // 버튼 숨김
-      }, 500); // 페이드 아웃 효과 후 숨김
-    }
+  if (window.scrollY > 100) { // 스크롤 위치가 100 이상일 때
+    topBtn.style.display = "block"; // Top 버튼 표시
+    topBtn.style.opacity = 1; // 완전 불투명
   } else {
-    topBtn.style.display = "none"; // 480px 이하에서는 버튼 숨기기
+    topBtn.style.opacity = 0; // 투명도 감소
+    setTimeout(() => {
+      topBtn.style.display = "none"; // 완전히 숨기기
+    }, 500); // 0.5초 후에 완전히 숨김
   }
 }
 
