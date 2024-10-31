@@ -133,6 +133,12 @@ function closeCartPopup() {
   cartPopup.style.display = "none"; // 팝업 숨김
 }
 
+// 구매하기 버튼 클릭 시 호출되는 함수
+function purchaseItems() {
+  // payment.html 페이지로 이동
+  location.href = "payment.html";
+}
+
 // Top 버튼의 표시 여부를 토글하는 함수
 function toggleTopButtonVisibility(topBtn) {
   if (window.innerWidth > 480) {
