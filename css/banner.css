@@ -107,5 +107,13 @@
     .b360px {
       display: none;
     }
+   
   }
-  
+  @media (max-width: 400px) {
+    .b768px {
+      display: none;
+    }
+    .b360px {
+      display: block;
+    }
+  }

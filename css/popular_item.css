@@ -133,7 +133,7 @@
 /* 장바구니 아이콘 부분 */
 .add-to-cart {
   position: absolute;
-  bottom: 25%; 
+  bottom: 18%; 
   right: 15px; /* 필요에 따라 조정 */
   z-index: 10; /* 이미지 위에 표시되도록 */
 }
@@ -197,7 +197,7 @@
     height: 250px; /* 이미지 높이 조정 */
   }
   .add-to-cart {
-    bottom: 25%; /* 필요에 따라 조정 */
+    bottom: 20%; ; /* 필요에 따라 조정 */
     right: 15px; /* 필요에 따라 조정 */
   }
   .product-item > .product-name {
@@ -241,7 +241,7 @@
     display: none; /* 5번 상품부터 숨김 */
   }
   .add-to-cart {
-    bottom: 23%; /* 필요에 따라 조정 */
+    bottom: 18%;  /* 필요에 따라 조정 */
     right: 15px; /* 필요에 따라 조정 */
   }
 }
@@ -251,6 +251,10 @@
   }
   .product-item img{
     max-height: 210px;
+  }
+  .add-to-cart {
+    bottom: 22%;  /* 필요에 따라 조정 */
+    right: 15px; /* 필요에 따라 조정 */
   }
 }
 /* 480px 이하 */
@@ -304,8 +308,7 @@
   }
 
   .add-to-cart {
-    bottom: 110px; /* 필요에 따라 조정 */
-    right: 15px; /* 필요에 따라 조정 */
+    bottom: 22%; 
   }
 
   .more-link {
