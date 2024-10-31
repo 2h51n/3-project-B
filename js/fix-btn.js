@@ -123,8 +123,8 @@ function showNotification(message) {
     notification.style.opacity = 0; // 불투명도 감소
     setTimeout(() => {
       notification.style.display = "none"; // 0.6초 후에 숨기기
-    }, 300);
-  }, 2000); // 2초 후에 사라지기 시작
+    }, 100);
+  }, 3000); // 2초 후에 사라지기 시작
 }
 
 // 장바구니 팝업을 닫는 함수

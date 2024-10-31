@@ -259,7 +259,7 @@
                               <img src="images/A/icon/popup-icon/user_icon_my.png" alt="유저 아이콘" />
                             </a>
                           </div>
-  
+
                           <!-- <div class="cartBt">
                             <a href="#">
                               <img src="images/A/icon/popup-icon/cart-icon.svg" alt="카트 아이콘" />
@@ -350,12 +350,13 @@
                     <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
                   </a>
                 </div>
-                <div class="loginBt_my" style="display: none;"> <!-- 초기에는 감춰져야 함 -->
+                <div class="loginBt_my" style="display: none">
+                  <!-- 초기에는 감춰져야 함 -->
                   <a href="#">
                     <img src="images/A/icon/popup-icon/user_icon_my.svg" alt="유저 아이콘" />
                   </a>
                 </div>
-  
+
                 <!-- <div class="cartBt">
                   <a href="#">
                     <img src="images/A/icon/popup-icon/cart-icon.svg" alt="카트 아이콘" />
@@ -438,6 +439,7 @@
 
           <!-- 상품 설명 탭 내용 -->
           <div class="detail-tab-content" id="detail-description">
+            <div class="detail-tab-description-bline"></div>
             <div class="detail-image-container detail-card">
               <img src="images/detail/suncatcher.png" alt="상품설명" id="mainImage" />
             </div>
@@ -445,6 +447,7 @@
 
           <!-- 브랜드 소개 탭 내용 -->
           <div class="detail-tab-content" id="detail-brand" style="display: none">
+            <div class="detail-tab-brand-bline"></div>
             <div class="detail-image-brand detail-card">
               <img src="images/detail/suncatcher-brand.png" alt="브랜드" id="brandImage" />
             </div>
@@ -478,42 +481,42 @@
     </div>
     <script>
       $(document).ready(function () {
-          checkLoginStatus(); // 로그인 상태 확인
+        checkLoginStatus(); // 로그인 상태 확인
 
-          function checkLoginStatus() {
-              const loginStatus = localStorage.getItem("loginStatus");
-              if (loginStatus) {
-                  $(".loginBt").hide(); // 로그인 아이콘 숨기기
-                  $(".loginBt_my").show(); // 마이 아이콘 표시
-                  showNotification("로그인 상태: " + loginStatus); // 로그인 상태 알림
-              } else {
-                  $(".loginBt").show(); // 로그인 아이콘 표시
-                  $(".loginBt_my").hide(); // 마이 아이콘 숨기기
-                  showNotification("로그인 상태가 아닙니다.");
-              }
+        function checkLoginStatus() {
+          const loginStatus = localStorage.getItem("loginStatus");
+          if (loginStatus) {
+            $(".loginBt").hide(); // 로그인 아이콘 숨기기
+            $(".loginBt_my").show(); // 마이 아이콘 표시
+            showNotification("로그인 상태: " + loginStatus); // 로그인 상태 알림
+          } else {
+            $(".loginBt").show(); // 로그인 아이콘 표시
+            $(".loginBt_my").hide(); // 마이 아이콘 숨기기
+            showNotification("로그인 상태가 아닙니다.");
           }
+        }
 
-          function showNotification(message) {
-              $("#notification").text(message).fadeIn(300); // 알림 표시
-              setTimeout(function () {
-                  $("#notification").fadeOut(300); // 3초 후 알림 사라짐
-              }, 3000);
-          }
+        function showNotification(message) {
+          $("#notification").text(message).fadeIn(300); // 알림 표시
+          setTimeout(function () {
+            $("#notification").fadeOut(300); // 3초 후 알림 사라짐
+          }, 3000);
+        }
 
-          // 기존 알림 div 요소에 스타일 적용
-          $("#notification").css({
-              position: "fixed",
-              bottom: "20px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              backgroundColor: "#fdd835",
-              color: "black !important",
-              padding: "10px 20px",
-              borderRadius: "5px",
-              zIndex: 1000,
-              display: "none",
-          });
+        // 기존 알림 div 요소에 스타일 적용
+        $("#notification").css({
+          position: "fixed",
+          bottom: "20px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          backgroundColor: "#fdd835",
+          color: "black !important",
+          padding: "10px 20px",
+          borderRadius: "5px",
+          zIndex: 1000,
+          display: "none",
+        });
       });
-  </script>
+    </script>
   </body>
 </html>

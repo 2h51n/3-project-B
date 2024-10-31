@@ -36,7 +36,7 @@
 .dp-sub-images > img {
   width: calc(25%);
   cursor: pointer;
-padding: 0 5px;
+  padding: 0 5px;
 }
 /* 상품정보 top */
 .detail-info {
@@ -95,7 +95,6 @@ padding: 0 5px;
   cursor: pointer;
 }
 
-
 /* 상품정보 bottom */
 .detail-info-bottom {
   display: flex;
@@ -127,6 +126,7 @@ padding: 0 5px;
 }
 .detail-btn > a {
   width: 100%;
+  /* text-decoration: none; */
 }
 .detail-btn > a > button {
   width: 98%;
@@ -134,7 +134,7 @@ padding: 0 5px;
   padding: 15px;
   font-weight: 600;
   margin: 0 auto;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 .detail-btn-cart {
   background-color: #d9d9d9;
@@ -151,22 +151,21 @@ padding: 0 5px;
   display: flex;
   align-items: center;
   width: 100%;
-position: relative;
+  position: relative;
 }
 
-.detail-tab-description-bline{
+.detail-tab-description-bline {
   position: absolute;
   top: -2px;
   border-top: 2px solid #000;
   width: 50%;
 }
-.detail-tab-brand-bline{
+.detail-tab-brand-bline {
   position: absolute;
   top: -2px;
   border-top: 2px solid #000;
   width: 50%;
   right: 0;
-
 }
 .detail-tab-container {
   display: flex;
@@ -190,7 +189,6 @@ position: relative;
 .detail-card {
   width: 100%;
   margin: 0 auto;
-
 }
 .detail-tab-content {
   display: block;
@@ -203,28 +201,27 @@ position: relative;
 }
 .detail-image-container img {
   width: 100%;
-
 }
 .detail-image-container img {
   padding-top: 100px;
 }
-.detail-image-brand{
-    padding-top: 7%;
-    padding-left: 15%;
+.detail-image-brand {
+  padding-top: 7%;
+  padding-left: 15%;
 }
 .detail-image-brand img {
   width: 80%;
-
 }
-#description-tab{
+#description-tab {
   font-weight: 800;
 }
 /* 반응형 */
 @media (max-width: 1100px) {
-  .detail-info-line{
-    padding:15px ;}
+  .detail-info-line {
+    padding: 15px;
+  }
 }
-@media (max-width: 1170px){
+@media (max-width: 1170px) {
   .detail-top {
     margin-top: 15%;
   }
@@ -251,7 +248,6 @@ position: relative;
   }
   .detail-info-top-oprice > span {
     font-size: 20px;
-    
   }
   .detail-info-top-star img {
     width: 100px;
@@ -263,114 +259,116 @@ position: relative;
     width: 30%;
   }
   .detail-info-line > span {
-    width: 70%;}
+    width: 70%;
   }
-  @media (max-width: 960px) {
-    .detail-btn > a > button {
-      width: 98%;
-      font-size: 20px;
-      padding: 10px;
-      font-weight: 600;
-
-    }
-
-  }
-  @media (max-width: 860px){
-    .detail-info-line > p {
-      font-size: 16px;
-      width: 30%;
-    }
-    .detail-info-line > span {
-      line-height: 1.2;
-      font-size: 14px;
-    }
-  }
-  @media (max-width: 760px){
-    .detail-info-top-coupon {
-      width: 100%;
-      margin: 10px 0;
-    }
-    .detail-info-top h1 {
-      font-size: 25px;
-      margin: 10px 0;
-    }
-    .detail-info-top-dprice {
-      font-size: 20px;
-      font-weight: 500;
-    }
-    .detail-info-top-oprice {
-      font-size: 20px;
-      font-weight: 400;
-    }
-    .detail-info-top-oprice > span {
-      font-size: 16px;
-      
-    }
-    .detail-info-top-dprice > span {
-      font-size: 16px;
-    }
-    .detail-info-top-star img {
-      width: 100px;
-    }
-    .detail-info-line > p {
-      width: 30%;
-    }
-    .detail-info-line > span {
-      width: 70%;}
-      .detail-info-line > p {
-        font-size: 15px;
-  }
-  .detail-info-line{
-    padding:10px ;}
-  
-    .detail-btn > a > button {
-      width: 98%;
-      font-size: 15px;
-      padding: 5px;
-      font-weight: 700;
-    }
-
 }
-    @media (max-width: 690px){
-      .detail-top{
-        flex-direction: column;
-        align-items: center
-    }
-    .detail-info {
-      width: 100%;
-      margin: 0px;
-    }
-    .detail-product-img {
-      width: 100%;
-    }
-    .detail-info-top-coupon {
-      margin-bottom: 10px;
-    }
+@media (max-width: 960px) {
+  .detail-btn > a > button {
+    width: 98%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
   }
-  @media (max-width: 690px){
-    .detail-top {
-      margin-top: 20%;}
-      .detail-tab-button{
-        font-size: 14px;
-        padding: 5px;
-      }
-      .detail-image-brand {
-        padding-top: 9%;
-        padding-left: 9%;
-    }
-      .detail-image-brand img {
-        width: 90%;
-        padding: 0px;
-      }
-      .detail-image-container img {
-        padding-top: 10%;
-      }
+}
+@media (max-width: 860px) {
+  .detail-info-line > p {
+    font-size: 16px;
+    width: 30%;
   }
-  @media (max-width: 470px){
-    .detail-top {
-      margin-top: 25%;}
+  .detail-info-line > span {
+    line-height: 1.2;
+    font-size: 14px;
   }
-  @media (max-width: 380px){
-    .detail-top {
-      margin-top: 30%;}
+}
+@media (max-width: 760px) {
+  .detail-info-top-coupon {
+    width: 100%;
+    margin: 10px 0;
   }
+  .detail-info-top h1 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .detail-info-top-dprice {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .detail-info-top-oprice {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .detail-info-top-oprice > span {
+    font-size: 16px;
+  }
+  .detail-info-top-dprice > span {
+    font-size: 16px;
+  }
+  .detail-info-top-star img {
+    width: 100px;
+  }
+  .detail-info-line > p {
+    width: 30%;
+  }
+  .detail-info-line > span {
+    width: 70%;
+  }
+  .detail-info-line > p {
+    font-size: 15px;
+  }
+  .detail-info-line {
+    padding: 10px;
+  }
+
+  .detail-btn > a > button {
+    width: 98%;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 690px) {
+  .detail-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-info {
+    width: 100%;
+    margin: 0px;
+  }
+  .detail-product-img {
+    width: 100%;
+  }
+  .detail-info-top-coupon {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 690px) {
+  .detail-top {
+    margin-top: 20%;
+  }
+  .detail-tab-button {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .detail-image-brand {
+    padding-top: 9%;
+    padding-left: 9%;
+  }
+  .detail-image-brand img {
+    width: 90%;
+    padding: 0px;
+  }
+  .detail-image-container img {
+    padding-top: 10%;
+  }
+}
+@media (max-width: 470px) {
+  .detail-top {
+    margin-top: 25%;
+  }
+}
+@media (max-width: 380px) {
+  .detail-top {
+    margin-top: 30%;
+  }
+}
