@@ -52,6 +52,8 @@
     <script src="js/fix-btn.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/header_aboutus.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    
     <title>B안 공지 'JUNKY FUNKY!'</title>
     <style>
       html {
@@ -61,6 +63,7 @@
         width: 100%;
         /* max-width: 1300px; */
         margin-top: 200px;
+        margin-bottom: 100px;
         display: block;
         /* background-color: antiquewhite; */
       }
@@ -88,11 +91,11 @@
         max-width: 1000px;
         margin: 50px auto;
         border-collapse: separate; /* 경계를 분리 */
-    border-spacing: 0; /* 셀 간격을 없앰 */
-    border: 1px solid #ddd; /* 테이블 경계 */
-    border-radius: 10px; /* 테이블 모서리에 둥근 효과 */
-    overflow: hidden; /* 둥근 모서리 효과를 적용하기 위해 필요 */
-        
+        border-spacing: 0; /* 셀 간격을 없앰 */
+        border: 1px solid #ddd; /* 테이블 경계 */
+        border-radius: 10px; /* 테이블 모서리에 둥근 효과 */
+        overflow: hidden; /* 둥근 모서리 효과를 적용하기 위해 필요 */
+
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -132,19 +135,19 @@
 
       #noticeList td:nth-child(2) {
         width: 100%;
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
 
       #noticeList td:nth-child(2) a {
-    display: block; /* 또는 inline-block */
-    /* max-width: 150px; */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+        display: block; /* 또는 inline-block */
+        /* max-width: 150px; */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
       #noticeList tr td:nth-child(2):hover {
         font-weight: bold;
       }
@@ -310,7 +313,8 @@
                   <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
                 </a>
               </div>
-              <div class="loginBt_my" style="display: none;"> <!-- 초기에는 감춰져야 함 -->
+              <div class="loginBt_my" style="display: none">
+                <!-- 초기에는 감춰져야 함 -->
                 <a href="#">
                   <img src="images/A/icon/popup-icon/user_icon_my.svg" alt="유저 아이콘" />
                 </a>
@@ -362,6 +366,30 @@
         </ul>
       </div>
     </section>
+    <!-- 푸터 영역-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>&copy; inter JUNKYFUNKY System B.V 1999 - 2024</p>
+          <img class="logo" src="images/A/footer/ft_logo.png" alt="푸터 로고" />
+          <p>주소: (유) 경기도 광명시 일직로 17, 1층 (역직동) 정키펑키 본점</p>
+          <p>사업자 등록번호: 106-84-7765</p>
+          <p>대표자: 김홍도</p>
+          <p>통신판매업 신고: 2024-경기광명-1184</p>
+          <p>고객센터: 1670-4532</p>
+        </div>
+        <div class="footer-right">
+          <p><a href="#">개인정보 처리방침</a></p>
+          <p><a href="#">쿠키 정책</a></p>
+          <p><a href="#">쿠키설정</a></p>
+          <p><a href="#">웹사이트 이용약관</a></p>
+          <p><a href="#">Responsible Disclosure</a></p>
+          <p><a href="#">회사안내</a></p>
+          <p><a href="#">입점 상담안내</a></p>
+          <p><a href="#">고객센터</a></p>
+        </div>
+      </div>
+    </footer>
 
     <script>
       const itemsPerPage = 12;

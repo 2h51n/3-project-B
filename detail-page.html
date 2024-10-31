@@ -13,6 +13,8 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header_aboutus.css" />
+
     <!-- js -->
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -383,13 +385,13 @@
             <div class="detail-product-img">
               <div class="detail-breadcrumb">홈 > 카테고리 > 유리</div>
               <div class="dp-main-image">
-                <img src="images/product images/pd_img (12).png" alt="바다 한 조각" class="dpmainimg" id="dpmainimg" />
+                <img src="images/product images/pd_img (12).png" alt="바다 한 조각" class="active" id="dpmainimg" />
               </div>
               <div class="dp-sub-images">
                 <img src="images/product images/pd_img (12-1).png" alt="바다 한 조각 이미지1" onclick="changeImage('dpmainimg', this)" />
                 <img src="images/product images/pd_img (12-2).png" alt="바다 한 조각 이미지2" onclick="changeImage('dpmainimg', this)" />
                 <img src="images/product images/pd_img (12-3).png" alt="바다 한 조각 이미지3" onclick="changeImage('dpmainimg', this)" />
-                <img src="images/product images/pd_img (12).png" alt="바다 한 조각 이미지4" onclick="changeImage('dpmainimg', this)" />
+                <img src="images/detail/Group 48349.png" alt="바다 한 조각 이미지4" onclick="changeImage('dpmainimg', this)" />
               </div>
             </div>
             <!-- 상품 정보영역 -->
@@ -413,7 +415,7 @@
                 </li>
                 <li class="detail-info-line">
                   <p>배송비</p>
-                  <span>3000원 <span><br />(5만원 이상 구매시 무료배송)</span></span>
+                  <span>3000원 <span>(5만원 이상 구매시 무료배송)</span></span>
                 </li>
                 <li class="detail-info-line">
                   <p>카드추가혜택</p>
@@ -436,7 +438,6 @@
 
           <!-- 상품 설명 탭 내용 -->
           <div class="detail-tab-content" id="detail-description">
-            <div class="detail-tab-description-bline"></div>
             <div class="detail-image-container detail-card">
               <img src="images/detail/suncatcher.png" alt="상품설명" id="mainImage" />
             </div>
@@ -444,7 +445,6 @@
 
           <!-- 브랜드 소개 탭 내용 -->
           <div class="detail-tab-content" id="detail-brand" style="display: none">
-            <div class="detail-tab-brand-bline"></div>
             <div class="detail-image-brand detail-card">
               <img src="images/detail/suncatcher-brand.png" alt="브랜드" id="brandImage" />
             </div>
@@ -476,5 +476,44 @@
         </div>
       </footer>
     </div>
+    <script>
+      $(document).ready(function () {
+          checkLoginStatus(); // 로그인 상태 확인
+
+          function checkLoginStatus() {
+              const loginStatus = localStorage.getItem("loginStatus");
+              if (loginStatus) {
+                  $(".loginBt").hide(); // 로그인 아이콘 숨기기
+                  $(".loginBt_my").show(); // 마이 아이콘 표시
+                  showNotification("로그인 상태: " + loginStatus); // 로그인 상태 알림
+              } else {
+                  $(".loginBt").show(); // 로그인 아이콘 표시
+                  $(".loginBt_my").hide(); // 마이 아이콘 숨기기
+                  showNotification("로그인 상태가 아닙니다.");
+              }
+          }
+
+          function showNotification(message) {
+              $("#notification").text(message).fadeIn(300); // 알림 표시
+              setTimeout(function () {
+                  $("#notification").fadeOut(300); // 3초 후 알림 사라짐
+              }, 3000);
+          }
+
+          // 기존 알림 div 요소에 스타일 적용
+          $("#notification").css({
+              position: "fixed",
+              bottom: "20px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              backgroundColor: "#fdd835",
+              color: "black !important",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              zIndex: 1000,
+              display: "none",
+          });
+      });
+  </script>
   </body>
 </html>

@@ -3,7 +3,7 @@
 .modal {
   display: none; /* 기본적으로 모달을 숨깁니다 */
   position: fixed; /* 고정 위치 */
-  z-index: 1000; /* 최상위 계층 */
+  z-index: 9999; /* 최상위 계층 */
   left: 0;
   top: 0;
   width: 100%; /* 전체 화면 너비 */
