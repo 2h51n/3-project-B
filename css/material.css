@@ -197,10 +197,12 @@
 }
 
 #showMoreButton {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 10px;
+  font-size: 12px;
   cursor: pointer;
   display: none;
+  border-radius: 20px;
+  margin: 10px auto!important;  
 }
 
 .m_title {
@@ -211,7 +213,7 @@
 /* 장바구니 아이콘 부분 */
 .add-to-cart1 {
   position: absolute;
-  bottom: 42%; /* 필요에 따라 조정 */
+  bottom: 28%; /* 필요에 따라 조정 */
   right: 5%; /* 필요에 따라 조정 */
   z-index: 10; /* 이미지 위에 표시되도록 */
 }
@@ -226,6 +228,9 @@
   .material-goods-card a > img {
     height: 433px;
   }
+  
+
+
 }
 
 /* 880px 이하 화면을 위한 미디어 쿼리 */
@@ -279,8 +284,11 @@
     display: block;
     border: none;
     color: #333;
-    background-color: #fdd835;
+    background-color: #d8d8d5;
+    font-size: 11px;
+    margin-top:0px ;
   }
+  
 }
 
 /* 360px 이하 화면을 위한 미디어 쿼리 */
@@ -302,9 +310,8 @@
   .more-link_m {
     display: block;
   }
-  .add-to-cart1 {
-    bottom: 35%; /* 상대적으로 위치 조정 */
-    right: 5%; /* 오른쪽 여백 조정 */
+  .add-icon{
+    bottom: 20%;
   }
 }
 
@@ -402,10 +409,13 @@
     right: 5%; /* 오른쪽 여백 조정 */
   }
 
-  .add-icon {
-    width: 30px; /* 아이콘 크기 조정 */
-    height: 30px;
+  .add-to-cart1 {
+    position: absolute;
+    bottom: 25%; /* 필요에 따라 조정 */
+    right: 5%; /* 필요에 따라 조정 */
+    z-index: 10; /* 이미지 위에 표시되도록 */
   }
+  
 
   .slide-area {
     max-width: 400px; /* 슬라이드 영역 최대 너비 조정 */
@@ -415,7 +425,7 @@
 
 @media (max-width: 360px) {
   .add-to-cart1 {
-    bottom: 37%; /* 상대적으로 위치 조정 */
+    bottom: 25%; /* 상대적으로 위치 조정 */
     right: 5%; /* 오른쪽 여백 조정 */
   }
 
