@@ -28,6 +28,7 @@
   background-color: #fdd835;
   border-radius: 50px;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .more-link:hover {
