@@ -129,6 +129,7 @@
 }
 
 .materal-rating span {
+  margin-top: 2%;
   font-weight: bold;
 }
 
@@ -261,7 +262,7 @@
     padding: 0 10%;
   }
   .materal-textbox p {
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 10px;
   }
 
@@ -393,7 +394,6 @@
     bottom: 30%; /* 상대적으로 위치 조정 */
     right: 5%; /* 오른쪽 여백 조정 */
   }
-
 }
 
 @media (min-width: 361px) and (max-width: 479px) {

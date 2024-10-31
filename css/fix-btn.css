@@ -5,9 +5,9 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 1000;
   cursor: pointer;
   transition: transform 0.3s, filter 0.3s;
+  z-index: 100;
 }
 
 .fixBtn:hover {
@@ -42,7 +42,6 @@
   position: fixed; /* 화면 고정 */
   bottom: 150px; /* 화면 하단에서의 거리 */
   right: 30px; /* 화면 오른쪽에서의 거리 */
-  z-index: 1000; /* 다른 요소 위에 나타나도록 설정 */
 }
 
 .social-icons {
@@ -52,7 +51,6 @@
   display: none; /* 기본 상태는 숨김 */
   flex-direction: row; /* 세로로 나열 */
   gap: 10px; /* 아이콘 간 간격 설정 */
-  z-index: 1000; /* CS 버튼 위에 나타나도록 설정 */
 }
 
 .social-icon {
