@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환경을 살리는 소비 'JUNKY FUNKY!'</title>
+    <!-- SEO 적용 -->
+    <meta name="description" content="정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <meta name="keywords" content="정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <meta property="og:title" content="환경을 살리는 소비 'JUNKY FUNKY!'" />
+    <meta property="og:description" content="환경을 살리는 소비 'JUNKY FUNKY!', 정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <meta property="og:image" content="https://3-project-alpha.vercel.app/images/A/main_logo.png" />
+    <meta property="og:url" content="https://3-project-alpha.vercel.app/" />
+    <meta property="og:site_name" content="환경을 살리는 소비 'JUNKY FUNKY!'" />
+    <meta property="og:type" content="website" />
+    <!-- 파비콘 및 CSS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/payment.css" />
+    <!-- AOS.js & 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- js -->
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/material.js"></script>
+    <script src="js/popular_item.js"></script>
+    <script src="js/subscription.js"></script>
+    <script src="js/rookie_brand.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/fix-btn.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body>
+    <!-- 알림 메시지 -->
+    <div id="notification" style="display: none" color="black">상품이 장바구니에 추가되었습니다!</div>
+    <!-- 구독알림메시지 -->
+    <div id="subscriptionNotification"></div>
+    <!-- 장바구니 고정 버튼 -->
+    <div class="cart-btn fixBtn">
+      <a href="#">
+        <img src="images/btn/cart_btn.png" alt="구매하기 고정버튼" class="fix-btn-img" />
+        <!-- <img src="images/btn/cart_hover_btn.png" alt="구매하기 고정버튼 호버" class="fix-btn-img-hover" /> -->
+        <span id="cartCount" class="cart-count">0</span>
+        <!-- 카운터 추가 -->
+      </a>
+    </div>
+    <!-- 로그인 버튼 -->
+    <div class="fixed-buttons login-btn">
+      <div class="loginBt">
+        <a href="#">
+          <img src="images/btn/user-login.png" alt="유저 아이콘" class="loginbtn_img" />
+        </a>
+      </div>
+      <div class="loginBt_my">
+        <a href="#">
+          <img src="images/btn/user-my.png" alt="유저 마이 아이콘" />
+        </a>
+      </div>
+    </div>
+    <!-- CS버튼 -->
+    <div class="cs-btn fixBtn" tabindex="0">
+      <img src="images/btn/cs_btn.png" alt="고객센터" class="cs-btn-img" />
+      <div class="social-icons" role="menu" aria-hidden="true">
+        <img src="images/btn/kakaotalk.png" alt="카카오톡" class="social-icon kakao-btn-img" tabindex="0" />
+        <img src="images/btn/naver_talk_icon_green.png" alt="네이버" class="social-icon naver-btn-img" tabindex="0" />
+      </div>
+    </div>
+    <!-- Top 버튼 -->
+    <div class="top-btn fixBtn">
+      <img src="images/btn/top_btn.png" alt="탑버튼" class="top-btn-img" />
+    </div>
+    <div class="checkout-container" data-aos="fade-up">
+      <!-- 헤더 -->
+      <header class="header_pay">
+        <a href="index.html"><img src="images/A/main_logo.png" alt="Junky Funky Logo" class="logo" /></a>
+        <span id="title">결제 창</span>
+      </header>
+      <!-- 주문 정보 -->
+      <section class="order-summary" data-aos="fade-right">
+        <h2>주문 정보</h2>
+        <span>판매자 : <업체명> </span>
+        <div class="product">
+          <img src="images/product images/pd_img (16).png" alt="Product Image" />
+          <div class="product-info">
+            <p class="str">[마지막 상품]</p>
+            <p>S.I.N.C.H. 2024</p>
+            <p>가격: <strong>US 31,000</strong> (배송비 무료)</p>
+            <p>배송: Expected International Shipping</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 배송 정보 -->
+      <section class="shipping-address" data-aos="fade-left">
+        <h2>배송 도착지</h2>
+        <form action="#">
+          <label>이름</label>
+          <input type="text" placeholder="이름을 입력하세요." required />
+          <label>도로명 주소</label>
+          <input type="text" placeholder="도로명 주소를 입력하세요." required />
+          <label>이메일</label>
+          <input type="email" placeholder="이메일 입력" required />
+          <label>전화번호</label>
+          <input type="text" placeholder="전화번호 입력" required />
+        </form>
+      </section>
+
+      <!-- 결제 방법 -->
+      <section class="payment-method" data-aos="fade-right">
+        <h2>결제 방법</h2>
+        <div class="payment-options">
+          <label><input type="radio" name="payment" /> 카드 추가</label>
+          <label><input type="radio" name="payment" /> PayPal</label>
+          <label><input type="radio" name="payment" /> 계좌 이체</label>
+        </div>
+      </section>
+
+      <!-- 쿠폰 추가 -->
+      <section class="coupon" data-aos="fade-left">
+        <h2>쿠폰 적용</h2>
+        <input type="text" placeholder="쿠폰 코드를 입력하세요" />
+
+        <button type="submit">결제하기</button>
+      </section>
+      <footer>
+        <p class="ft_p">Copyright © 1995-2024 JunkyFunky Inc.</p>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
