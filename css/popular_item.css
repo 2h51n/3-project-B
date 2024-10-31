@@ -65,16 +65,16 @@
   font-weight: bold;
 }
 
-.product-item p{
+.product-item {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 5px 0 8px 5px;
   text-decoration: none;
   color: #333;
-  font-size: 19px;
+  font-size: 16px;
   text-align: left;
-
+  line-height: 1.5;
 }
 .product-image {
   width: 100%;
@@ -84,13 +84,9 @@
 .product-item >.product-brand {
   font-size: 15px;
   padding-top: 10px;
-
-}
-.product-price{
   font-weight: bold;
-  color: #870000;
-}
 
+}
 /* 별점 아이콘 */
 .popular-rating{
   padding-left: 5px;
@@ -221,15 +217,11 @@
   }
 
   .product-item > .product-name {
-    font-size: 19px;
+    font-size: 16px;
 
   }
   
-  .product-brand {
-    font-size: 13px;
-    /* font-weight: bold; */
 
-  }
   
   /* 별점 아이콘 */
   .rating-icon {
@@ -255,7 +247,7 @@
 }
 @media (max-width: 590px) {
   .product-item >.product-name {
-    font-size: 16px;
+    font-size: 15px;
   }
   .product-item img{
     max-height: 210px;
@@ -265,14 +257,17 @@
 @media (max-width: 485px) {
   .product-grid {
     grid-template-columns: 2fr; 
-    padding: 10px;
+    padding: 10px 40px;
   }
   .section-title {
     font-size: 20px; /* 섹션 타이틀 크기 조정 */
   }
   .product-item > .product-name {
-    font-size: 19px;
+    font-size: 17px;
 
+  }
+  .product-item{
+    line-height: 1.2;
   }
   
   .product-brand {
@@ -282,7 +277,7 @@
   }
   
   .product-price {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
     margin: 2% 0;
