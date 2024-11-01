@@ -126,7 +126,7 @@
 }
 .detail-btn > a {
   width: 100%;
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 .detail-btn > a > button {
   width: 98%;
@@ -134,7 +134,7 @@
   padding: 15px;
   font-weight: 600;
   margin: 0 auto;
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 .detail-btn-cart {
   background-color: #d9d9d9;
@@ -370,5 +370,13 @@
 @media (max-width: 380px) {
   .detail-top {
     margin-top: 30%;
+  }
+}
+@media (max-width: 350px) {
+  .detail-info-line > p {
+    font-size: 14px;
+  }
+  .detail-info-line > span {
+    font-size: 13px;
   }
 }
