@@ -71,7 +71,7 @@ function addToCart(productName, productPrice) {
   sessionStorage.setItem("cartItems", JSON.stringify(cartItems)); // 세션 스토리지에 저장
   updateCartCount();
   updateCartPopup();
-  showNotification(`${productName}이(가) \n장바구니에 \n추가되었습니다!`);
+  showNotification(`${productName}(가) <br>장바구니에 추가되었습니다!`);
 
   const cartIcon = document.querySelector(".cart-icon");
   cartIcon.classList.add("shake-animation");
@@ -93,7 +93,7 @@ function updateCartPopup() {
   cartItemsList.innerHTML = "";
 
   if (cartItems.length === 0) {
-    cartItemsList.innerHTML = "<li>장바구니가 \n비어 있습니다.</li>";
+    cartItemsList.innerHTML = "<li>장바구니가 <br>비어 있습니다.</li>";
   } else {
     cartItems.forEach((item) => {
       const listItem = document.createElement("li");
@@ -123,7 +123,7 @@ function removeFromCart(productName) {
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems)); // 세션 스토리지에 업데이트
     updateCartCount();
     updateCartPopup();
-    showNotification(`${productName}이(가) \n장바구니에서 \n제거되었습니다!`);
+    showNotification(`${productName}이(가) <br>장바구니에서 제거되었습니다!`);
 
     const cartIcons = document.querySelectorAll(".cart-icon");
     cartIcons.forEach((icon) => {
@@ -168,7 +168,8 @@ function purchaseItems() {
 
 // Top 버튼의 표시 여부를 토글하는 함수
 function toggleTopButtonVisibility(topBtn) {
-  if (window.scrollY > 100) { // 스크롤 위치가 100 이상일 때
+  if (window.scrollY > 100) {
+    // 스크롤 위치가 100 이상일 때
     topBtn.style.display = "block"; // Top 버튼 표시
     topBtn.style.opacity = 1; // 완전 불투명
   } else {
