@@ -218,7 +218,6 @@
   z-index: 10; /* 이미지 위에 표시되도록 */
 }
 
-
 /* 1024px 이하 화면을 위한 미디어 쿼리 */
 @media (max-width: 1024px) {
   .material-goods-card {
@@ -229,12 +228,10 @@
     height: 433px;
   }
 
-
   .add-to-cart1 {
     bottom: 14%; /* 상대적으로 위치 조정 */
     right: 4%; /* 오른쪽 여백 조정 */
   }
-
 
   .add-icon {
     width: 35px; /* 아이콘 크기 조정 */
@@ -250,7 +247,6 @@
   .materal-rating > img {
     width: 120px;
   }
-
 }
 
 /* 880px 이하 화면을 위한 미디어 쿼리 */
@@ -269,7 +265,6 @@
   .material-goods-card a > img {
     max-height: 328.61px;
   }
-
 
   .b1920px {
     display: none;
@@ -329,7 +324,6 @@
     background-color: #fdd835;
     font-size: 11px;
     margin-top: 0px;
-
   }
 
   .add-to-cart1 {
@@ -337,9 +331,8 @@
   }
 
   .slide-area {
-    max-width: 400px; 
+    max-width: 400px;
   }
-
 }
 
 /* 360px 이하 화면을 위한 미디어 쿼리 */
@@ -419,8 +412,6 @@
   }
 }
 
- .material-goods-card a > img {
-    max-height: 250px;
-  }
+.material-goods-card a > img {
+  max-height: 250px;
 }
-
