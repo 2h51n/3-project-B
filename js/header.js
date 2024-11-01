@@ -117,6 +117,7 @@ window.onload = function () {
       cateIcon.classList.remove("hidden");
     });
   });
+
   document.querySelectorAll(".side-bottom-menu li").forEach((item) => {
     item.addEventListener("click", () => {
       // .sidemenu-area의 .active 클래스 제거
@@ -126,24 +127,18 @@ window.onload = function () {
     });
   });
 
+  // 검색 버튼 클릭 시
   search830.addEventListener("click", function () {
     if (searchInput.classList.contains("active")) {
       // 인풋이 이미 활성화된 상태면 비활성화 처리
       searchInput.classList.remove("active");
-      loginBThidden.classList.remove("hidden");
+      // loginBThidden.classList.remove("hidden");
       headLogo.classList.remove("hidden");
-      cateIcon.classList.remove("hidden"); // cateIcon을 다시 보이게
     } else {
       // 인풋이 비활성화된 상태면 활성화 처리
       searchInput.classList.add("active");
-      loginBThidden.classList.add("hidden");
+      // loginBThidden.classList.add("hidden");
       headLogo.classList.add("hidden");
-
-      // 화면 너비가 358px 이하인 경우에만 cateIcon 숨기기
-      if (window.innerWidth <= 358) {
-        cateIcon.classList.add("hidden");
-      }
-
     }
   });
 
@@ -165,7 +160,6 @@ window.onload = function () {
     if (window.innerWidth > 400) {
       cateClose2.style.display = "none";
     }
-
   });
 
   // 비디오 항목 체크 (video태그로 파악)
