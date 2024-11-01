@@ -59,6 +59,7 @@
 .material-main {
   display: block;
   width: 100%;
+  padding-top: 10px;
   /* background-color: aquamarine; */
 }
 
@@ -260,11 +261,11 @@
   }
 
   .material-goods-card a > img {
-    max-height: 300px;
+    max-height: 250px;
   }
 
   .material-goods {
-    padding: 0 10%;
+    padding: 0;
   }
   .materal-textbox p {
     font-size: 15px;
@@ -289,30 +290,6 @@
     margin-top:0px ;
   }
   
-}
-
-/* 360px 이하 화면을 위한 미디어 쿼리 */
-@media (max-width: 385px) {
-  .material-goods {
-    display: grid; /* 그리드 레이아웃으로 전환 */
-    grid-template-columns: repeat(1, 1fr); /* 1열 배치 */
-    gap: 10px; /* 그리드 아이템 간의 간격 */
-  }
-
-  .material-goods-card a > img {
-    max-height: 250px;
-  }
-
-  .material-goods-card {
-    flex: unset; /* Flex 속성 제거 */
-    width: 100%; /* 카드가 전체 너비를 차지하도록 설정 */
-  }
-  .more-link_m {
-    display: block;
-  }
-  .add-icon{
-    bottom: 20%;
-  }
 }
 
 
@@ -356,6 +333,7 @@
     bottom: 30%; /* 상대적으로 위치 조정 */
     right: 5%; /* 오른쪽 여백 조정 */
   }
+
 }
 
 @media (min-width: 361px) and (max-width: 479px) {
@@ -364,13 +342,10 @@
     right: 5%; /* 오른쪽 여백 조정 */
   }
 
-  .add-to-cart1 {
-    position: absolute;
-    bottom: 25%; /* 필요에 따라 조정 */
-    right: 5%; /* 필요에 따라 조정 */
-    z-index: 10; /* 이미지 위에 표시되도록 */
+  .add-icon {
+    width: 30px; /* 아이콘 크기 조정 */
+    height: 30px;
   }
-  
 
   .slide-area {
     max-width: 400px; /* 슬라이드 영역 최대 너비 조정 */
@@ -380,8 +355,12 @@
 
 @media (max-width: 360px) {
   .add-to-cart1 {
-    bottom: 25%; /* 상대적으로 위치 조정 */
+    bottom: 37%; /* 상대적으로 위치 조정 */
     right: 5%; /* 오른쪽 여백 조정 */
   }
+  .material-goods-card a > img {
+    max-height: 250px;
+  }
+
 
 }
