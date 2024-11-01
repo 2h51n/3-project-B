@@ -25,10 +25,10 @@ $(document).ready(function () {
       const userId = localStorage.getItem("userId"); // 로그인된 유저 ID 가져오기
 
       // 로그인 상태일 경우, 쿠폰 지급 완료 메시지
-      showNotification(`${userId}님, 쿠폰 지급이 완료되었습니다.`);
+      showNotification(`${userId}님, 쿠폰 지급이 <br>완료되었습니다.`);
     } else {
       // 로그인되지 않은 상태일 경우 로그인 모달 띄우기 및 알림 메시지 표시
-      showNotification(`쿠폰이 지급 예정입니다. <br /> 로그인 또는 회원가입을 해주세요.`);
+      showNotification(`쿠폰이 지급 예정입니다. <br> 로그인 또는 <br>회원가입을 해주세요.`);
       $("#loginModal").fadeIn(); // 로그인 모달 열기
     }
   });
@@ -41,7 +41,7 @@ $(document).ready(function () {
     $("#welcomePopup").fadeOut(300); // 환영 팝업 숨김
 
     // 로그아웃 후 쿠폰 알림 초기화
-    $("#couponAlert").html(`쿠폰이 지급 예정입니다. <br /> 로그인 또는 회원가입을 해주세요.`); // 기본 알림 메시지로 초기화
+    $("#couponAlert").html(`쿠폰이 지급 예정입니다. <br> 로그인 또는 <br>회원가입을 해주세요.`); // 기본 알림 메시지로 초기화
   });
 
   // 로그인 상태 확인 함수
@@ -50,14 +50,14 @@ $(document).ready(function () {
     if (loginStatus) {
       showNotification("로그인 상태: " + loginStatus); // 로그인 상태 알림
     } else {
-      showNotification("로그인 상태가 아닙니다."); // 변경된 알림
+      showNotification("로그인 <br>상태가 아닙니다."); // 변경된 알림
     }
   }
 
   // 환영 팝업 표시 함수
   function showWelcomePopup() {
     const userId = localStorage.getItem("userId");
-    $("#welcomeMessage").html(`${userId}님 환영합니다!`); // 사용자 아이디 표시
+    $("#welcomeMessage").html(`${userId}님 <br>환영합니다!`); // 사용자 아이디 표시
     $("#welcomePopup").fadeIn(300); // 팝업 표시
   }
 
