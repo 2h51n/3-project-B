@@ -176,7 +176,7 @@ $(document).ready(function () {
   // 로그아웃 버튼 클릭 이벤트
   $(document).on("click", ".logout-button", function () {
     localStorage.removeItem("loginStatus"); // 로그인 상태 제거
-    showNotification("로그아웃 \n되었습니다.");
+    showNotification("로그아웃 <br>되었습니다.");
     $("#welcomePopup").fadeOut(300); // 환영 팝업 숨기기
     checkLoginStatus(); // UI 업데이트
   });
@@ -203,6 +203,5 @@ $(document).ready(function () {
     borderRadius: "5px",
     zIndex: 1000,
     display: "none",
-    width: "80%",
   });
 });
