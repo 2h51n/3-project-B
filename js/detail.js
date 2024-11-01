@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
   descriptionTab.addEventListener("click", () => {
     descriptionContent.style.display = "block";
     brandContent.style.display = "none";
-    descriptionTab.style.fontWeight = "800";
+    descriptionTab.style.fontWeight = "700";
     brandTab.style.fontWeight = "100";
     descriptionTab.classList.add("active");
     brandTab.classList.remove("active");
@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
     descriptionContent.style.display = "none";
     brandContent.style.display = "block";
     descriptionTab.style.fontWeight = "100";
-    brandTab.style.fontWeight = "800";
+    brandTab.style.fontWeight = "700";
     brandTab.classList.add("active");
     descriptionTab.classList.remove("active");
   });

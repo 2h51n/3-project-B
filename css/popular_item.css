@@ -227,11 +227,13 @@
 
   
   /* 별점 아이콘 */
-  .rating-icon {
+  /* .rating-icon {
     width: 80px;
     height: 14px;
+  } */
+  .popular-rating > img{
+    width: 120px;
   }
-  
   /* 리뷰 개수 */
   .review-count {
     font-size: 12px;
@@ -258,6 +260,7 @@
     bottom: 22%;  /* 필요에 따라 조정 */
     right: 15px; /* 필요에 따라 조정 */
   }
+
 }
 /* 480px 이하 */
 @media (max-width: 510px) {
@@ -295,6 +298,7 @@
   .more-link {
     font-size: 14px;
   }
+
 }
 
 /* 480px 이하 */
