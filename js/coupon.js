@@ -2,6 +2,8 @@ $(document).ready(function () {
   // 페이지가 로드될 때 로그인 상태 확인
   checkLoginStatus();
 
+  let couponAlertDisplayed = false; // 쿠폰 알림 표시 상태 변수
+
   // 로그인 아이콘 클릭 이벤트
   $(".loginBt a").on("click", function (event) {
     event.preventDefault(); // 기본 링크 동작 방지
@@ -25,18 +27,25 @@ $(document).ready(function () {
       const userId = localStorage.getItem("userId"); // 로그인된 유저 ID 가져오기
 
       // 로그인 상태일 경우, 쿠폰 지급 완료 메시지
-      showNotification(`${userId}님, <br>쿠폰 지급이 <br>완료되었습니다.`);
+      if (!couponAlertDisplayed) { // 알림이 이미 표시되지 않은 경우
+        couponAlertDisplayed = true; // 알림 표시 상태 업데이트
+        showNotification(`${userId}님, <br>쿠폰 지급이 <br>완료되었습니다.`);
+        setTimeout(() => { couponAlertDisplayed = false; }, 3000); // 3초 후 알림 표시 상태 초기화
+      }
     } else {
       // 로그인되지 않은 상태일 경우 로그인 모달 띄우기 및 알림 메시지 표시
-      showNotification(`쿠폰이 <br>지급 예정입니다. <br>로그인 또는 <br>회원가입을 해주세요.`);
-      $("#loginModal").fadeIn(); // 로그인 모달 열기
+      if (!couponAlertDisplayed) { // 알림이 이미 표시되지 않은 경우
+        couponAlertDisplayed = true; // 알림 표시 상태 업데이트
+        showNotification(`쿠폰이 <br>지급 예정입니다. <br>로그인 또는 <br>회원가입을 해주세요.`);
+        $("#loginModal").fadeIn(); // 로그인 모달 열기
+        setTimeout(() => { couponAlertDisplayed = false; }, 3000); // 3초 후 알림 표시 상태 초기화
+      }
     }
   });
 
   // 로그아웃 버튼 클릭 이벤트
   $(document).on("click", ".logout-button", function () {
     localStorage.removeItem("loginStatus"); // 로그인 상태 제거
-    // localStorage.removeItem("userId"); // 사용자 ID는 제거하지 않음
     showNotification("로그아웃 되었습니다.");
     $("#welcomePopup").fadeOut(300); // 환영 팝업 숨김
 

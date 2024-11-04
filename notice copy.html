@@ -50,10 +50,14 @@
     <script src="js/review.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/fix-btn.js"></script>
+    <script src="js/login.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/header_aboutus.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/fix-btn.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
     <title>B안 공지 'JUNKY FUNKY!'</title>
     <style>
       html {
@@ -154,6 +158,19 @@
     </style>
   </head>
   <body>
+    <!-- 로그인 버튼 -->
+    <div class="fixed-buttons login-btn">
+      <div class="loginBt">
+        <a href="#">
+          <img src="images/btn/user-login.png" alt="유저 아이콘" class="loginbtn_img" />
+        </a>
+      </div>
+      <div class="loginBt_my">
+        <a href="#">
+          <img src="images/btn/user-my.png" alt="유저 마이 아이콘" />
+        </a>
+      </div>
+    </div>
     <!-- 헤더 영역 -->
     <header class="header">
       <div class="container">
@@ -308,17 +325,16 @@
                   <input type="text" id="searchMBInput" placeholder="모바일 검색어를 입력하세요" />
                 </a>
               </div>
-              <div class="loginBt">
+              <!-- <div class="loginBt">
                 <a href="#">
                   <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
                 </a>
               </div>
               <div class="loginBt_my" style="display: none">
-                <!-- 초기에는 감춰져야 함 -->
                 <a href="#">
                   <img src="images/A/icon/popup-icon/user_icon_my.svg" alt="유저 아이콘" />
                 </a>
-              </div>
+              </div> -->
 
               <!-- <div class="cartBt">
                 <a href="#">
@@ -390,7 +406,6 @@
         </div>
       </div>
     </footer>
-
     <script>
       const itemsPerPage = 12;
       let currentPage = 1;

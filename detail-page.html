@@ -3,23 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO 적용 -->
+    <meta name="description" content="정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <meta name="keywords" content="정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <meta property="og:title" content="환경을 살리는 소비 'JUNKY FUNKY!',정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <meta property="og:description" content="환경을 살리는 소비 'JUNKY FUNKY!', 정키펑키, 업사이클링, 브랜드, 플랫폼, 재활용, 리사이클링" />
+    <!-- 버셀 주소 -->
+    <meta property="og:image" content="https://3-project-alpha.vercel.app/images/A/main_logo.png" />
+    <meta property="og:url" content="https://3-project-alpha.vercel.app/" />
+    <meta property="og:site_name" content="환경을 살리는 소비 'JUNKY FUNKY!'" />
+    <meta property="og:type" content="website" />
     <!-- 파비콘 -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png" />
-    <!-- <link rel="manifest" href="images/favicon//site.webmanifest" /> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="images/favicon/site.webmanifest" /> -->
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- css -->
+    <!-- css적용 -->
     <link rel="stylesheet" href="css/reset.css" />
+    <!-- swiper css적용 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/fix-btn.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/header_aboutus.css" />
-
     <!-- js -->
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/jquery-1.12.3.js"></script>
+    >
     <!-- js -->
+    <script src="js/main.js"></script>
     <script src="js/detail.js"></script>
     <script src="js/popular_item.js"></script>
     <script src="js/fix-btn.js"></script>
@@ -31,6 +52,19 @@
     <title>상품상세페이지</title>
   </head>
   <body>
+    <!-- 로그인 버튼 -->
+    <div class="fixed-buttons login-btn">
+      <div class="loginBt">
+        <a href="#">
+          <img src="images/btn/user-login.png" alt="유저 아이콘" class="loginbtn_img" />
+        </a>
+      </div>
+      <div class="loginBt_my">
+        <a href="#">
+          <img src="images/btn/user-my.png" alt="유저 마이 아이콘" />
+        </a>
+      </div>
+    </div>
     <div class="wrap">
       <!-- 헤더 영역 -->
       <header class="header">
@@ -186,17 +220,16 @@
                     <input type="text" id="searchMBInput" placeholder="모바일 검색어를 입력하세요" />
                   </a>
                 </div>
-                <div class="loginBt">
+                <!-- <div class="loginBt">
                   <a href="#">
                     <img src="images/A/icon/popup-icon/user-icon.svg" alt="유저 아이콘" />
                   </a>
                 </div>
                 <div class="loginBt_my" style="display: none">
-                  <!-- 초기에는 감춰져야 함 -->
                   <a href="#">
                     <img src="images/A/icon/popup-icon/user_icon_my.svg" alt="유저 아이콘" />
                   </a>
-                </div>
+                </div> -->
 
                 <!-- <div class="cartBt">
                   <a href="#">

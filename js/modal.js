@@ -34,7 +34,7 @@ $(document).ready(function () {
       // 시간이 다 되었을 때
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
-        $modal.hide(); // 모달 숨기기
+        closeModal(); // 모달 숨기기 함수 호출
         console.log("타이머가 종료되었습니다."); // 확인 로그
       }
 
@@ -42,27 +42,37 @@ $(document).ready(function () {
     }, 1000); // 1초마다 업데이트
   }
 
-  // 페이지 로드 시 쿠키 확인: '오늘 하루 열지 않음'이 체크되어 있으면 팝업을 띄우지 않음
-  if (getCookie("notToday") !== "true") {
-    $modal.show(); // 쿠키가 없으면 모달 표시
-    startTimer(); // 타이머 시작
-  }
+  // 모달 닫기 함수
+  function closeModal() {
+    $modal.removeClass("modal-open"); // opacity를 먼저 낮추기
+    setTimeout(function () {
+      $modal.hide(); // 완전히 숨기기
+    }, 500); // CSS 애니메이션 시간과 동일한 지연 시간 (0.5초)
 
-  // 닫기 버튼 클릭 시 모달 닫기
-  $closeButton.click(function () {
-    $modal.hide(); // 모달 숨기기
+    // '오늘 하루 열지 않음'이 체크되어 있으면 쿠키 설정
     if ($notTodayCheckbox.is(":checked")) {
       setCookie("notToday", "true", 1); // 1일 동안 유지되는 쿠키 설정
       console.log("오늘 하루 열지 않기 설정됨"); // 확인 로그
     } else {
       console.log("오늘 하루 열지 않기 설정되지 않음"); // 확인 로그
     }
+  }
+
+  // 페이지 로드 시 쿠키 확인: '오늘 하루 열지 않음'이 체크되어 있으면 팝업을 띄우지 않음
+  if (getCookie("notToday") !== "true") {
+    $modal.show().addClass("modal-open"); // 모달 표시 및 애니메이션 적용
+    startTimer(); // 타이머 시작
+  }
+
+  // 닫기 버튼 클릭 시 모달 닫기
+  $closeButton.click(function () {
+    closeModal(); // 모달 숨기기
   });
 
   // 모달 바깥 클릭 시 모달 닫기
   $(window).click(function (event) {
     if ($(event.target).is($modal)) {
-      $modal.hide(); // 모달 숨기기
+      closeModal(); // 모달 숨기기
     }
   });
 });
